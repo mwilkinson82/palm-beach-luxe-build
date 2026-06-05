@@ -39,6 +39,8 @@ export const VideoHero = ({
   const [muted, setMuted] = useState(true);
   const [reducedMotion, setReducedMotion] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
+  const [inView, setInView] = useState(true);
 
   const source = isMobile ? mobile : desktop;
 
@@ -120,8 +122,30 @@ export const VideoHero = ({
     }
   };
 
+  // Auto-mute when the hero scrolls out of view; restore the user's audio
+  // preference (without restarting) when it scrolls back in. This avoids
+  // forcing a fresh "Tap for sound" + restart every time the user returns.
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el || typeof IntersectionObserver === "undefined") return;
+    const io = new IntersectionObserver(
+      ([entry]) => setInView(entry.intersectionRatio > 0.35),
+      { threshold: [0, 0.35, 0.6, 1] }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
+  // Apply the effective mute state: user intent OR scrolled-away.
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    video.muted = muted || !inView;
+  }, [muted, inView]);
+
   return (
     <section
+      ref={sectionRef}
       aria-label="Cinematic introduction to Beau Monde Builders"
       className="relative h-[100svh] w-full overflow-hidden bg-black"
     >
