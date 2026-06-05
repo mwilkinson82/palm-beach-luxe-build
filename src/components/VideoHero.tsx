@@ -92,11 +92,32 @@ export const VideoHero = ({
   const toggleMute = () => {
     const video = videoRef.current;
     if (!video) return;
-    const next = !muted;
-    video.muted = next;
-    setMuted(next);
-    audioPreference.set(!next);
-    if (!next) video.play().catch(() => {});
+    const nextMuted = !muted;
+
+    if (!nextMuted) {
+      // Unmuting: restart from the beginning so the user catches the
+      // intro music + AJ's opening line. Fade out during the seek and
+      // let the existing `playing` listener fade back in.
+      setReady(false);
+      try {
+        video.currentTime = 0;
+      } catch {
+        // ignore — some browsers throw if metadata isn't ready yet
+      }
+      video.muted = false;
+      setMuted(false);
+      audioPreference.set(true);
+      video.play().catch(() => {
+        // If autoplay-with-sound is blocked, leave the video where it is
+        // but keep the unmuted state so the next loop plays with audio.
+        setReady(true);
+      });
+    } else {
+      // Re-mute in place, no restart.
+      video.muted = true;
+      setMuted(true);
+      audioPreference.set(false);
+    }
   };
 
   return (
@@ -153,7 +174,7 @@ export const VideoHero = ({
       <button
         type="button"
         onClick={toggleMute}
-        aria-label={muted ? "Unmute video" : "Mute video"}
+        aria-label={muted ? "Play video with sound from the beginning" : "Mute video"}
         className="absolute bottom-8 right-4 sm:right-8 lg:right-16 z-10 group flex items-center gap-2 border border-white/30 bg-black/30 backdrop-blur-md px-4 py-2.5 text-white text-[10px] md:text-xs uppercase tracking-[0.25em] font-light hover:border-accent hover:bg-black/50 transition-colors"
       >
         {muted ? (
@@ -161,7 +182,7 @@ export const VideoHero = ({
         ) : (
           <Volume2 className="h-3.5 w-3.5 md:h-4 md:w-4 text-accent" />
         )}
-        <span>{muted ? "Unmute" : "Mute"}</span>
+        <span>{muted ? "Tap for sound" : "Mute"}</span>
       </button>
     </section>
   );
