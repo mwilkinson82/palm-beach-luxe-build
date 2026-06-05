@@ -15,11 +15,11 @@ export const Footer = () => {
                 Beau Monde
               </span>
               <span className="mt-1 block text-[10px] uppercase tracking-[0.4em] text-accent/90 font-medium">
-                Builders · Space Coast
+                Builders · Palm Beach
               </span>
             </div>
             <p className="text-sm font-light leading-relaxed max-w-sm text-primary-foreground/70">
-              Creating Space Coast's most distinguished estates through architectural excellence
+              Creating Palm Beach's most distinguished estates through architectural excellence
               and uncompromising craftsmanship since 1994.
             </p>
           </div>
@@ -62,17 +62,17 @@ export const Footer = () => {
             <h4 className="text-[11px] uppercase tracking-[0.3em] text-accent font-semibold mb-6">Contact</h4>
             <address className="not-italic space-y-4 text-sm font-light text-primary-foreground/75">
               <p className="leading-relaxed">
-                1129 Rockledge Blvd<br />
-                Rockledge, FL 32955
+                205 Worth Avenue · Suite 120<br />
+                Palm Beach, FL 33480
               </p>
               <p>
-                <a href="tel:+13212984122" className="hover:text-primary-foreground transition-colors">
-                  (321) 298-4122
+                <a href="tel:+15616468992" className="hover:text-primary-foreground transition-colors">
+                  (561) 646-8992
                 </a>
               </p>
               <p>
-                <a href="mailto:ajhoover@mac.com" className="hover:text-primary-foreground transition-colors">
-                  ajhoover@mac.com
+                <a href="mailto:aj@bmbpalmbeach.com" className="hover:text-primary-foreground transition-colors">
+                  aj@bmbpalmbeach.com
                 </a>
               </p>
             </address>

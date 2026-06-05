@@ -73,7 +73,7 @@ export const RenovationsHero = () => {
       <div className="absolute bottom-8 left-4 sm:left-8 lg:left-16 z-10 flex items-center space-x-3 text-white">
         <div className="h-px w-8 md:w-12 bg-accent" />
         <span className="text-[10px] md:text-xs uppercase tracking-[0.3em] font-light text-white/80">
-          Rockledge, Florida
+          Palm Beach, Florida
         </span>
       </div>
 

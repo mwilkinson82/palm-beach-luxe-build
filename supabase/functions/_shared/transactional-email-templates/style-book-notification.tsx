@@ -76,7 +76,7 @@ export const template = {
   subject: (data: Props) =>
     `Style Book Inquiry${data?.style ? ` — ${data.style}` : ''}${data?.fullName ? ` — ${data.fullName}` : ''}`,
   displayName: 'Style Book — Internal Notification',
-  to: 'ajhoover@mac.com',
+  to: 'aj@bmbpalmbeach.com',
   previewData: {
     fullName: 'Jane Doe',
     email: 'jane@example.com',

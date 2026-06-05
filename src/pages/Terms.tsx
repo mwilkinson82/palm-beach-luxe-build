@@ -9,7 +9,7 @@ const Terms = () => {
       <SEO 
         title="Terms of Service"
         canonical="/terms"
-        description="Terms and conditions governing use of the Beau Monde Builders website and engagement of our Space Coast luxury homebuilding services."
+        description="Terms and conditions governing use of the Beau Monde Builders website and engagement of our Palm Beach luxury homebuilding services."
       />
       <div className="min-h-screen bg-background">
         <Navigation />
@@ -161,7 +161,7 @@ const Terms = () => {
                       These Terms shall be governed and construed in accordance with the laws of the State of 
                       Florida, United States, without regard to its conflict of law provisions. Any disputes 
                       arising under or in connection with these Terms shall be subject to the exclusive 
-                      jurisdiction of the courts located in Brevard County, Florida.
+                      jurisdiction of the courts located in Palm Beach County, Florida.
                     </p>
                   </div>
 
@@ -193,13 +193,13 @@ const Terms = () => {
                     </p>
                     <div className="mt-4 p-6 bg-secondary rounded-lg">
                       <p className="text-foreground font-medium">Beau Monde Builders</p>
-                      <p className="text-muted-foreground font-light">1129 Rockledge Blvd</p>
-                      <p className="text-muted-foreground font-light">Rockledge, FL 32955</p>
+                      <p className="text-muted-foreground font-light">205 Worth Avenue, Suite 120</p>
+                      <p className="text-muted-foreground font-light">Palm Beach, FL 33480</p>
                       <p className="text-muted-foreground font-light mt-2">
-                        Email: <a href="mailto:ajhoover@mac.com" className="text-accent hover:underline">ajhoover@mac.com</a>
+                        Email: <a href="mailto:aj@bmbpalmbeach.com" className="text-accent hover:underline">aj@bmbpalmbeach.com</a>
                       </p>
                       <p className="text-muted-foreground font-light">
-                        Phone: <a href="tel:+13212984122" className="text-accent hover:underline">(321) 298-4122</a>
+                        Phone: <a href="tel:+15616468992" className="text-accent hover:underline">(561) 646-8992</a>
                       </p>
                     </div>
                   </div>

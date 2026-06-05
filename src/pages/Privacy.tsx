@@ -154,13 +154,13 @@ const Privacy = () => {
                     </p>
                     <div className="mt-4 p-6 bg-secondary rounded-lg">
                       <p className="text-foreground font-medium">Beau Monde Builders</p>
-                      <p className="text-muted-foreground font-light">1129 Rockledge Blvd</p>
-                      <p className="text-muted-foreground font-light">Rockledge, FL 32955</p>
+                      <p className="text-muted-foreground font-light">205 Worth Avenue, Suite 120</p>
+                      <p className="text-muted-foreground font-light">Palm Beach, FL 33480</p>
                       <p className="text-muted-foreground font-light mt-2">
-                        Email: <a href="mailto:ajhoover@mac.com" className="text-accent hover:underline">ajhoover@mac.com</a>
+                        Email: <a href="mailto:aj@bmbpalmbeach.com" className="text-accent hover:underline">aj@bmbpalmbeach.com</a>
                       </p>
                       <p className="text-muted-foreground font-light">
-                        Phone: <a href="tel:+13212984122" className="text-accent hover:underline">(321) 298-4122</a>
+                        Phone: <a href="tel:+15616468992" className="text-accent hover:underline">(561) 646-8992</a>
                       </p>
                     </div>
                   </div>

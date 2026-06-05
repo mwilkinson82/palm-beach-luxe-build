@@ -51,4 +51,4 @@ Allow: /
 Disallow: /api/
 
 # Sitemap location
-Sitemap: https://bmb-space-coast.lovable.app/sitemap.xml
+Sitemap: https://bmbpalmbeach.com/sitemap.xml

@@ -1,94 +1,76 @@
-## Goal
+## About page — 2026 reframe: modern principal, extended bench
 
-Stand up **Beau Monde Builders — Space Coast** as a separate Lovable project remixed from this Palm Beach site, then deliver a full-parity mockup AJ can review against his current `bmb.builders` site.
+The current Story reads like an old-school craftsman in a truck. We're rewriting it as a modern principal who married old-world standards with new-world technology. We're also restructuring the team section so three faces clearly read as the **leadership** of a much larger network — not the entire company.
 
-Same palette, same typography, same wordmark, same structural pages. We change only what actually differs between the two markets: hero video, contact details, regional copy nuance, and a handful of media swaps on Renovations.
+### 1. New AJ portrait
+- Upload the attached `AJ_Hoover_Zoom_Profile_Full_View_Retina_1200.PNG` via `lovable-assets` to `src/assets/aj-hoover-v2.png.asset.json`.
+- Swap the hero `<img>` to use the new asset. Keep the old file untouched as a fallback.
+- The new photo is already presented in a square ivory mat with the AJ Hoover signature wordmark inset. To preserve that mat/signature treatment:
+  - Drop the brass hairline border and offset seafoam wash from around the portrait (the photo already has its own ivory frame).
+  - Switch the portrait frame from `aspect-[4/5]` to `aspect-square`.
+  - Remove the small "AJ Hoover · Founder" caption beneath it — the signature in the image does that job.
 
----
+### 2. Rewrite "The Story" — modern principal, not crusty craftsman
+Keep the three-movement structure (it scans well). Rewrite the copy and the pull quote so the tone reads like a CEO of a $5–20M custom home firm in 2026, not a guy who learned framing from his dad.
 
-## Step 1 — Create the sibling project (you do this, ~1 min)
+**I. Origin** — keep current copy. It earns the work ethic without sounding rural-quaint.
 
-In the Lovable sidebar, right-click this project → **Remix**. Name it something like **"Beau Monde Builders — Space Coast"** (or "bmb-space-coast"). Open the new project and tell me you're in it — all of Steps 2–6 below run inside the remixed project, not this one.
+**II. The Standard** — rewrite to lead with selection of partners + the standard he holds them to, not "the slow way."
+> "AJ moved to Florida and spent two decades curating the artisans, engineers, and trade partners now behind every Beau Monde home — the masons, millworkers, mechanical and technology specialists who meet a standard most firms can't enforce. Beau Monde isn't a crew. It's a vetted network operating under one signature."
 
-Why a remix vs. a section of this site: the two markets target different buyers ($15M Worth Avenue vs. $2–5M Space Coast). One codebase + one Search Console property + one domain would dilute both. Two independent sites lets each one rank, brand, and convert against its own audience.
+**Pull quote** — replace the current "old houses, by hand, by name" line. New quote:
+> "Old-world standards. New-world tools. One signature on every house."
 
----
+**III. Today** — rewrite to make it explicit: hands-on principal + modern operating system.
+> "Three decades on, AJ still walks every job and signs every standard — now backed by a technology stack that gives owners full transparency into daily logs, CPM schedules, and the selection process from dream board through procurement and install. Old discipline. Modern instruments."
 
-## Step 2 — Swap the hero video
+### 3. Reframe "The Team" → "Leadership"
+The problem: three people on a page implies a three-person company building $20M homes. The fix is to clearly label this as the leadership team and visually anchor it inside a much larger network.
 
-The current home hero video is a Palm Beach exterior. Replace it with Space Coast footage. Likely candidates already in this codebase that are actually Space Coast homes:
+**Section eyebrow + headline**
+- Change eyebrow from "The Bench" to "Leadership".
+- Change headline from "The Beau Monde team." to "The principals. The bench is deeper than three."
+- Add a short lede paragraph below the headline:
+> "Three principals lead Beau Monde day-to-day. Behind them sits a vetted network of architects, masons, millworkers, mechanical specialists, technology partners, and project consultants — each invited by AJ, each held to the same standard."
 
-- The AJ Hoover walkthrough video (used in `WalkthroughShowcase` / `InterviewShowcase`)
-- The "New from Beau Monde" delivery video (`DeliveryShowcase`, `new-delivery.mp4`)
-- Shores at Tranquility carousel stills
+**Role labels** — promote the three to the leadership tier so the titles match the framing:
+- John Colaiacovo → **Senior Project Manager**
+- Michelle Williams → **Director of Finance & Operations**
+- Linda Lucas → **Senior Project Manager**
 
-I'll either promote one of these to the hero slot or, if you have a dedicated Space Coast hero clip you'd rather use, you upload it and I wire it in. Default plan: use the AJ walkthrough exterior as the hero so the homepage immediately reads "Space Coast."
+**The Extended Bench strip** (new, sits directly under the three cards)
+A single full-width hairline-bordered band showing the network at a glance — counts + categories, no faces. Renders like an editorial colophon, not a logo wall.
 
----
+```text
+─────────────────────────────────────────────────
+THE EXTENDED BENCH
+Architects · Structural & Civil Engineers · Master Masons ·
+Millwork & Cabinetry · Mechanical, Electrical, Plumbing ·
+Smart-Home & Security · Landscape Architects · Interior Partners
+─────────────────────────────────────────────────
+   40+        20+          3
+   Vetted    Years of      Florida
+   Trade     Combined      Certified
+   Partners  Leadership    Master Builder
+─────────────────────────────────────────────────
+```
 
-## Step 3 — Update contact + location
+- Three brass-numeral stats in Cormorant, labels in Fira small-caps.
+- Hairline dividers above/below in `border-accent/20`.
+- Numbers are intentionally conservative + verifiable (40+ trade partners, 20+ years combined leadership tenure, 1 FCMB). I'll flag any number you want me to change before publishing.
+- No logos, no faces, no badges in this strip — keeps the "quiet luxury" rule.
 
-Replace Palm Beach contact block everywhere it appears (Footer, Contact page, SEO schema, `index.html` JSON-LD, `llms.txt`):
+**Closing micro-line under the strip**
+> "Small on purpose. Resourced like a firm three times the size."
 
-- Office address: Space Coast address (Cocoa Beach / Melbourne / Titusville — **need from you**)
-- Phone: Space Coast office line — **need from you, or reuse `(561) 646-8992` if it's the same line**
-- Email: Space Coast inbox — **need from you, or reuse `ajhoover@mac.com`**
-- Geo meta + LocalBusiness JSON-LD: re-point lat/long, region, placename
-- `areaServed`: Brevard County, Cocoa Beach, Cape Canaveral, Cocoa, Rockledge, Merritt Island, Satellite Beach, Indian Harbour Beach, Indialantic, Melbourne, Melbourne Beach, Palm Bay, Titusville, Viera, Suntree
-- Map / "find us" anything that points to Worth Avenue
+### 4. Files
+- `src/assets/aj-hoover-v2.png.asset.json` — new (via `lovable-assets`).
+- `src/pages/About.tsx` — Story copy rewrite, pull-quote rewrite, portrait frame/treatment change, team section reframe + Extended Bench strip + role title updates.
+- Old `aj-hoover.png` stays in place as a fallback.
 
----
+### Things I want you to confirm before I build
+1. **The three new role titles** — OK to promote John/Linda to "Senior Project Manager" and Michelle to "Director of Finance & Operations"? Or do you want different titles?
+2. **The bench numbers (40+ / 20+ / 1)** — say the word if you want different figures.
+3. **The new pull quote** — "Old-world standards. New-world tools. One signature on every house." — keep or revise?
 
-## Step 4 — Regional copy pass
-
-Swap Palm Beach–specific language without rewriting the brand voice. Sweep:
-
-- `Home.tsx`, `About.tsx`, `Process.tsx`, `Projects.tsx`, `Renovations.tsx`, `Press.tsx`, `Contact.tsx`
-- `Footer.tsx` tagline ("Creating Palm Beach's most distinguished estates…" → Space Coast equivalent)
-- `index.html` title + meta description + OG tags
-- `llms.txt`
-- Featured Residence section: lose any "Palm Beach" framing, lead with "Shores at Tranquility" by name
-- Drop a few specific Space Coast references (oceanfront on A1A, Banana River, Indian River, Port Canaveral, Kennedy Space Center adjacency) — used sparingly, in the same engraved tone we have here
-
-Wordmark, logo, "Builders · Palm Beach" eyebrow → "Builders · Space Coast". Color palette, typography, animations, layouts: untouched.
-
----
-
-## Step 5 — Media audit on Renovations + Projects
-
-- **Projects / Style Book**: stays as-is. The constellation gallery and style book images are aspirational design directions, not "we built this in Palm Beach" claims, so they translate cleanly.
-- **Renovations**: the before/after slider images are likely the most market-specific. I'll flag the current photos and you tell me which to keep vs. which need new Space Coast renovation photography. If you don't have replacements yet, we leave the existing ones with copy that frames them as "representative work" — same treatment used on Palm Beach.
-
----
-
-## Step 6 — SEO + infrastructure reset
-
-A remix carries over SEO artifacts that must not point at Palm Beach:
-
-- `public/sitemap.xml` and `scripts/generate-sitemap.ts` BASE_URL → new domain
-- `public/robots.txt` Sitemap directive → new domain
-- `index.html` canonical, `og:url`, JSON-LD `url`/`@id`, geo coordinates
-- `src/components/SEO.tsx` `businessInfo` block (url, logo, address, geo, phone, email, areaServed)
-- Google Search Console verification meta → **remove the Palm Beach one** until you verify the new domain in GSC (I'll walk you through it after the mockup is approved and a domain is connected)
-- `og:image` social preview → new image (I can generate one in the Space Coast palette or you provide)
-
-Contact form: the Supabase edge function in the remix is a fresh backend instance. I'll re-scaffold the contact email routing (Resend) so submissions go to the Space Coast inbox, not AJ's Palm Beach inbox. Needs the destination email from Step 3.
-
----
-
-## What I need from you before I start Step 2
-
-1. Space Coast **office address**, **phone**, **email** (or confirm we reuse the Palm Beach ones for now as placeholders).
-2. Confirm the hero video swap candidate (AJ walkthrough exterior is my default).
-3. Whether you want me to **generate a new social-preview image** for Space Coast or skip until you have photography.
-
-Everything else I can execute against and ship the mockup. Target deliverable: a published `*.lovable.app` preview URL you can send AJ alongside `bmb.builders` for the night-and-day comparison.
-
----
-
-## Technical notes
-
-- Remix preserves the full file tree, asset CDN references, Tailwind tokens, components, and Supabase edge function source. The new project gets its own Supabase backend, its own GSC property, its own domain.
-- No design-system changes. `index.css`, `tailwind.config.ts`, all `src/components/*` stay byte-identical except for the eyebrow text in `Footer.tsx` and `Navigation.tsx`.
-- Contact form: `supabase/functions/send-contact-email/index.ts` needs the Resend `to:` address updated and the `RESEND_API_KEY` secret re-added on the new backend.
-- Sitemap generator: only the `BASE_URL` constant changes; routes are identical.
+Once you greenlight (or edit) those three, I'll build it.

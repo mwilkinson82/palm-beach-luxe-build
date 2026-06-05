@@ -49,7 +49,7 @@ const phases = [
         number: "05",
         title: "Permits & Approvals",
         description:
-          "Town of Space Coast review, HOA navigation, and every approval — handled discreetly on your behalf.",
+          "Town of Palm Beach review, HOA navigation, and every approval — handled discreetly on your behalf.",
       },
     ],
   },

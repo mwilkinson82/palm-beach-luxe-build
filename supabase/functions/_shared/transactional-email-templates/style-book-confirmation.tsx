@@ -32,13 +32,13 @@ const Email = ({ firstName, style }: Props) => (
             : <>We have received your Style Book inquiry and appreciate you reaching out to Beau Monde Builders.</>}
         </Text>
         <Text style={text}>
-          Our office will review your inquiry and respond within twenty-four hours to arrange a private consultation on the Space Coast.
+          Our office will review your inquiry and respond within twenty-four hours to arrange a private consultation on Worth Avenue.
         </Text>
         <Hr style={hr} />
         <Text style={signature}>Beau Monde Builders</Text>
-        <Text style={meta}>1129 Rockledge Blvd</Text>
-        <Text style={meta}>Rockledge, FL 32955</Text>
-        <Text style={meta}>(321) 298-4122</Text>
+        <Text style={meta}>205 Worth Avenue, Suite 120</Text>
+        <Text style={meta}>Palm Beach, FL 33480</Text>
+        <Text style={meta}>(561) 646-8992</Text>
       </Container>
     </Body>
   </Html>
