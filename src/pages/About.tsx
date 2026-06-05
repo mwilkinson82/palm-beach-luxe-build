@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { RevealAnimation } from "@/components/RevealAnimation";
 import { SEO, PersonSchema, BreadcrumbSchema } from "@/components/SEO";
 import { Award, Shield, Users, FileCheck } from "lucide-react";
-import ajImageAsset from "@/assets/aj-hoover-v2.png.asset.json";
+import ajImageAsset from "@/assets/aj-hoover-v3.png.asset.json";
 import fcmbLogo from "@/assets/fcmb-logo.png";
 import nahbBadge from "@/assets/nahb-master-building-professional.png.asset.json";
 import michelleImage from "@/assets/michelle-williams.jpg";
