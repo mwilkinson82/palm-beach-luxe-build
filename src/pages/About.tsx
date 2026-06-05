@@ -12,6 +12,8 @@ import nahbBadge from "@/assets/nahb-master-building-professional.png.asset.json
 import michelleImage from "@/assets/michelle-williams.jpg";
 import johnImage from "@/assets/john-colaiacovo.jpg";
 import lindaImage from "@/assets/linda-lucas.jpg";
+import jillImageAsset from "@/assets/jill-hoover.png.asset.json";
+const jillImage = jillImageAsset.url;
 
 const ajImage = ajImageAsset.url;
 
