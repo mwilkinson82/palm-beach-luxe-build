@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { RevealAnimation } from "@/components/RevealAnimation";
 import { SEO, PersonSchema, BreadcrumbSchema } from "@/components/SEO";
 import { Award, Shield, Users, FileCheck } from "lucide-react";
-import ajImageAsset from "@/assets/aj-hoover-v2.png.asset.json";
+import ajImageAsset from "@/assets/aj-hoover-v3.png.asset.json";
 import fcmbLogo from "@/assets/fcmb-logo.png";
 import nahbBadge from "@/assets/nahb-master-building-professional.png.asset.json";
 import michelleImage from "@/assets/michelle-williams.jpg";
@@ -124,7 +124,7 @@ const About = () => {
                   className="relative will-change-transform"
                   style={{ transform: `translate3d(0, ${portraitY}px, 0)` }}
                 >
-                  <div className="relative aspect-square overflow-hidden">
+                  <div className="relative aspect-square overflow-hidden ring-1 ring-accent/60 shadow-[0_30px_60px_-20px_hsl(var(--primary)/0.35),0_12px_24px_-12px_hsl(var(--primary)/0.25)]">
                     <img
                       src={ajImage}
                       alt="AJ Hoover, Founder of Beau Monde Builders"
