@@ -853,7 +853,7 @@ const Home = () => {
               <span aria-hidden className="inline-block w-1 h-1 rounded-full bg-accent/70" />
               <a href="mailto:ajhoover@mac.com" className="hover:text-accent transition-colors normal-case tracking-[0.15em]">ajhoover@mac.com</a>
               <span aria-hidden className="inline-block w-1 h-1 rounded-full bg-accent/70" />
-              <span>205 Worth Ave.</span>
+              <span>1129 Rockledge Blvd.</span>
             </p>
           </RevealAnimation>
         </div>
