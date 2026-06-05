@@ -80,7 +80,7 @@ const Home = () => {
     <>
       <SEO 
         canonical="/"
-        description="Beau Monde Builders — Florida's premier custom luxury home builder on the Space Coast, Space Coast. 30 years crafting bespoke oceanfront estates."
+        description="Beau Monde Builders — Florida's premier custom luxury home builder on the Space Coast. 30 years crafting bespoke oceanfront estates."
       />
       
       {/* Splash Screen */}

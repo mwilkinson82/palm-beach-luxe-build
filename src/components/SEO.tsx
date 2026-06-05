@@ -15,7 +15,7 @@ const businessInfo = {
   legalName: "Beau Monde Builders LLC",
   url: "https://bmb-space-coast.lovable.app",
   logo: "https://bmb-space-coast.lovable.app/favicon.png",
-  description: "Florida's premier custom luxury home builder on the Space Coast, Space Coast. 30 years of bespoke homebuilding for discerning clients.",
+  description: "Florida's premier custom luxury home builder on the Space Coast. 30 years of bespoke homebuilding for discerning clients.",
   foundingDate: "1994",
   address: {
     streetAddress: "1129 Rockledge Blvd",
