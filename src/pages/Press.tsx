@@ -10,7 +10,7 @@ const Press = () => {
     <>
       <SEO 
         title="Press & Media"
-        description="Press coverage and media recognition for Beau Monde Builders. Industry awards, media features, and thought leadership in Palm Beach luxury homebuilding."
+        description="Press coverage and media recognition for Beau Monde Builders. Industry awards, media features, and thought leadership in Space Coast luxury homebuilding."
         canonical="/press"
       />
       <BreadcrumbSchema items={[
@@ -33,7 +33,7 @@ const Press = () => {
             </h1>
             <p className="text-xl text-muted-foreground font-light leading-relaxed max-w-3xl mx-auto">
               Recognized by industry leaders for setting new standards in luxury homebuilding 
-              throughout Palm Beach and Florida.
+              throughout Space Coast and Florida.
             </p>
           </div>
         </div>

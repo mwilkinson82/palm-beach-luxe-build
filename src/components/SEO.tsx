@@ -13,23 +13,23 @@ interface SEOProps {
 const businessInfo = {
   name: "Beau Monde Builders",
   legalName: "Beau Monde Builders LLC",
-  url: "https://bmbpalmbeach.com",
-  logo: "https://bmbpalmbeach.com/favicon.png",
-  description: "Florida's premier custom luxury home builder on Worth Avenue, Palm Beach. 30 years of bespoke homebuilding for discerning clients.",
+  url: "https://bmb-space-coast.lovable.app",
+  logo: "https://bmb-space-coast.lovable.app/favicon.png",
+  description: "Florida's premier custom luxury home builder on the Space Coast. 30 years of bespoke homebuilding for discerning clients.",
   foundingDate: "1994",
   address: {
-    streetAddress: "205 Worth Avenue, Suite 120",
-    addressLocality: "Palm Beach",
+    streetAddress: "1129 Rockledge Blvd",
+    addressLocality: "Space Coast",
     addressRegion: "FL",
     postalCode: "33480",
     addressCountry: "US"
   },
   geo: {
-    latitude: "26.7015",
-    longitude: "-80.0370"
+    latitude: "28.3303",
+    longitude: "-80.7253"
   },
-  phone: "+1-561-646-8992",
-  email: "aj@bmbpalmbeach.com",
+  phone: "+1-321-298-4122",
+  email: "ajhoover@mac.com",
   priceRange: "$$$$$",
   openingHours: ["Mo-Fr 09:00-17:00", "Sa By Appointment"],
   sameAs: [
@@ -39,9 +39,9 @@ const businessInfo = {
     "https://youtube.com/@beaumondebuilders"
   ],
   areaServed: [
-    "Palm Beach, FL",
-    "West Palm Beach, FL",
-    "Palm Beach County, FL",
+    "Space Coast, FL",
+    "Melbourne, FL",
+    "Brevard County, FL",
     "South Florida"
   ],
   services: [
@@ -125,7 +125,7 @@ const organizationSchema = {
   knowsAbout: [
     "Custom Home Building",
     "Luxury Construction",
-    "Palm Beach Architecture",
+    "Space Coast Architecture",
     "Florida Real Estate Development",
     "High-End Residential Construction"
   ]
@@ -159,7 +159,7 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What makes Beau Monde Builders different from other luxury home builders in Palm Beach?",
+      name: "What makes Beau Monde Builders different from other luxury home builders in Space Coast?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "Beau Monde Builders is led by AJ Hoover, a Florida Certified Master Builder with 30 years of experience. This elite designation is held by only the finest builders in Florida, requiring extensive experience, impeccable ethics, verified references, and unwavering commitment to client satisfaction. We provide hands-on leadership in every project, ensuring uncompromising quality."
@@ -170,7 +170,7 @@ const faqSchema = {
       name: "What areas does Beau Monde Builders serve?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Beau Monde Builders primarily serves Palm Beach, West Palm Beach, and Palm Beach County, Florida. We specialize in oceanfront estates, waterfront properties, and luxury custom homes throughout South Florida."
+        text: "Beau Monde Builders primarily serves Space Coast, Melbourne, and Brevard County, Florida. We specialize in oceanfront estates, waterfront properties, and luxury custom homes throughout South Florida."
       }
     },
     {
@@ -194,7 +194,7 @@ const faqSchema = {
       name: "How do I schedule a consultation with Beau Monde Builders?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "You can schedule a private consultation by calling (561) 646-8992, emailing info@beaumondebuilders.com, or visiting our office at 205 Worth Avenue, Suite 120, Palm Beach, FL 33480. Our office hours are Monday through Friday 9:00 AM to 5:00 PM, with Saturday appointments available by request."
+        text: "You can schedule a private consultation by calling (321) 298-4122, emailing ajhoover@mac.com, or visiting our office at 1129 Rockledge Blvd, Rockledge, FL 32955. Our office hours are Monday through Friday 9:00 AM to 5:00 PM, with Saturday appointments available by request."
       }
     }
   ]
@@ -205,10 +205,10 @@ export const SEO = ({
   description = businessInfo.description,
   canonical,
   type = "website",
-  image = "https://bmbpalmbeach.com/og-image.jpg",
+  image = "https://bmb-space-coast.lovable.app/og-image.jpg",
   noIndex = false,
 }: SEOProps) => {
-  const siteTitle = "Beau Monde Builders Palm Beach";
+  const siteTitle = "Beau Monde Builders Space Coast";
   const fullTitle = title ? `${title} | ${siteTitle}` : `${siteTitle} — Luxury Custom Home Builder`;
   const canonicalUrl = canonical ? `${businessInfo.url}${canonical}` : businessInfo.url;
 
@@ -225,7 +225,7 @@ export const SEO = ({
       
       {/* Geo Tags for Local SEO */}
       <meta name="geo.region" content="US-FL" />
-      <meta name="geo.placename" content="Palm Beach" />
+      <meta name="geo.placename" content="Space Coast" />
       <meta name="geo.position" content={`${businessInfo.geo.latitude};${businessInfo.geo.longitude}`} />
       <meta name="ICBM" content={`${businessInfo.geo.latitude}, ${businessInfo.geo.longitude}`} />
       
@@ -315,7 +315,7 @@ export const PersonSchema = ({
     knowsAbout: [
       "Custom Home Building",
       "Luxury Construction",
-      "Palm Beach Real Estate"
+      "Space Coast Real Estate"
     ]
   };
 

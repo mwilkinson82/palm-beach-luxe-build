@@ -24,7 +24,7 @@ export const InterviewShowcase = ({
               <div className="relative w-full aspect-video bg-black overflow-hidden md:border md:border-accent/30 shadow-2xl">
                 <iframe
                   src={iframeSrc}
-                  title="Realtor interview with AJ Hoover, CEO of Beau Monde Builders, at his newly completed Palm Beach residence"
+                  title="Realtor interview with AJ Hoover, CEO of Beau Monde Builders, at his newly completed Space Coast residence"
                   loading="lazy"
                   allow="autoplay; fullscreen; picture-in-picture"
                   allowFullScreen

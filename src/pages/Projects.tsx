@@ -47,7 +47,7 @@ const STYLES: Style[] = [
   {
     name: "Urban Classical",
     descriptor:
-      "Palm Beach gentility in town clothes — symmetry, scaled cornices, and rooms that know how to host.",
+      "Space Coast gentility in town clothes — symmetry, scaled cornices, and rooms that know how to host.",
     image: urbanClassical.url,
   },
   {
@@ -89,7 +89,7 @@ const STYLES: Style[] = [
   {
     name: "Transitional",
     descriptor:
-      "Traditional bones, modern interiors — the way most Palm Beach houses live today.",
+      "Traditional bones, modern interiors — the way most Space Coast houses live today.",
     image: transitional.url,
   },
   {
@@ -110,7 +110,7 @@ const projectsSchema = {
   "@type": "ItemList",
   name: "Beau Monde Builders — Style Studies",
   description:
-    "Ten design idioms — from Oceanfront to Regency — that shape Beau Monde's bespoke Palm Beach residences.",
+    "Ten design idioms — from Oceanfront to Regency — that shape Beau Monde's bespoke Space Coast residences.",
   itemListElement: STYLES.map((s, i) => ({
     "@type": "ListItem",
     position: i + 1,
@@ -219,7 +219,7 @@ const FrontCover = () => (
       variants={fadeUp}
       className="font-sans text-[10px] tracking-[0.5em] uppercase text-accent"
     >
-      Beau Monde · Palm Beach
+      Beau Monde · Space Coast
     </motion.p>
 
     <div className="flex flex-col items-center gap-8">
@@ -529,7 +529,7 @@ const InquiryPlate = ({ defaultStyle }: { defaultStyle?: string }) => {
       console.error("Style Book inquiry failed:", err);
       toast({
         title: "Something went wrong",
-        description: "Please try again or call (561) 646-8992.",
+        description: "Please try again or call (321) 298-4122.",
         variant: "destructive",
       });
     } finally {
@@ -549,7 +549,7 @@ const InquiryPlate = ({ defaultStyle }: { defaultStyle?: string }) => {
         variants={fadeUp}
         className="font-sans text-[10px] tracking-[0.5em] uppercase text-accent"
       >
-        Beau Monde · Palm Beach
+        Beau Monde · Space Coast
       </motion.p>
 
       <motion.div variants={fadeImg} className="flex flex-col items-center gap-2 mt-2">
@@ -669,7 +669,7 @@ const InquiryPlate = ({ defaultStyle }: { defaultStyle?: string }) => {
         variants={fadeUp}
         className="font-sans text-[9px] tracking-[0.4em] uppercase text-accent/70 mt-3"
       >
-        Replies within 24 hours · 205 Worth Avenue
+        Replies within 24 hours · 1129 Rockledge Blvd
       </motion.p>
     </div>
   );
@@ -884,7 +884,7 @@ const Projects = () => {
     <>
       <SEO
         title="Find Your Style"
-        description="Ten design idioms — Oceanfront, Mediterranean, Bermuda Colonial, Transitional and more — that shape Beau Monde's bespoke Palm Beach residences."
+        description="Ten design idioms — Oceanfront, Mediterranean, Bermuda Colonial, Transitional and more — that shape Beau Monde's bespoke Space Coast residences."
         canonical="/projects"
       />
       <BreadcrumbSchema

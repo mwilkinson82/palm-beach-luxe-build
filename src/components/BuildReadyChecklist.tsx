@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 
 const items = [
   { k: "Architectural drawings", v: "Approved & stamped" },
-  { k: "Permits & approvals", v: "Town of Palm Beach in hand" },
+  { k: "Permits & approvals", v: "Town of Space Coast in hand" },
   { k: "Scope & budget", v: "Locked, line-by-line" },
   { k: "Material & finish schedule", v: "Specified to spec sheets" },
   { k: "Trade partners", v: "Selected and contracted" },

@@ -99,7 +99,7 @@ const Unsubscribe = () => {
                   You have been unsubscribed
                 </h1>
                 <p className="font-sans text-foreground/70 leading-relaxed">
-                  You will no longer receive emails from Beau Monde Builders. If this was a mistake, please contact us at (561) 646-8992.
+                  You will no longer receive emails from Beau Monde Builders. If this was a mistake, please contact us at (321) 298-4122.
                 </p>
               </>
             )}
@@ -121,7 +121,7 @@ const Unsubscribe = () => {
                   Link no longer valid
                 </h1>
                 <p className="font-sans text-foreground/70 leading-relaxed">
-                  This unsubscribe link is invalid or has expired. Please reach out to us directly at (561) 646-8992 or aj@bmbpalmbeach.com.
+                  This unsubscribe link is invalid or has expired. Please reach out to us directly at (321) 298-4122 or ajhoover@mac.com.
                 </p>
               </>
             )}
