@@ -90,7 +90,7 @@ export const SplashScreen = ({ duration = 3000, onComplete }: SplashScreenProps)
             <div className="h-px w-8 bg-accent" />
           </div>
           <p className="text-sm sm:text-base md:text-lg tracking-[0.25em] uppercase text-primary/50 font-light mt-2">
-            Palm Beach
+            Space Coast
           </p>
         </div>
 

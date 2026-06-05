@@ -67,7 +67,7 @@ export const template = {
   component: Email,
   subject: (data: Props) => `New Contact Inquiry${data?.fullName ? ` — ${data.fullName}` : ''}`,
   displayName: 'Contact Form — Internal Notification',
-  to: 'aj@bmbpalmbeach.com',
+  to: 'ajhoover@mac.com',
   previewData: {
     fullName: 'Jane Doe',
     email: 'jane@example.com',

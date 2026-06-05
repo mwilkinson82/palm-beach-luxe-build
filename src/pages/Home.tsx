@@ -43,7 +43,7 @@ const EMBLEM_MEANINGS = [
   },
   {
     title: "Palm Trees",
-    body: "Our geographical stamp — the tranquility and exclusive heritage of Palm Beach woven into the design itself.",
+    body: "Our geographical stamp — the tranquility and exclusive heritage of Space Coast woven into the design itself.",
   },
 ];
 
@@ -80,7 +80,7 @@ const Home = () => {
     <>
       <SEO 
         canonical="/"
-        description="Beau Monde Builders — Florida's premier custom luxury home builder on Worth Avenue, Palm Beach. 30 years crafting bespoke oceanfront estates."
+        description="Beau Monde Builders — Florida's premier custom luxury home builder on the Space Coast, Space Coast. 30 years crafting bespoke oceanfront estates."
       />
       
       {/* Splash Screen */}
@@ -94,7 +94,7 @@ const Home = () => {
       <div className="min-h-screen bg-background">
         <Navigation />
 
-      <h1 className="sr-only">Beau Monde Builders — Custom Luxury Home Builder in Palm Beach</h1>
+      <h1 className="sr-only">Beau Monde Builders — Custom Luxury Home Builder in Space Coast</h1>
 
       {/* Hero Section - Cinematic Video */}
       <VideoHero />
@@ -247,7 +247,7 @@ const Home = () => {
 
               <RevealAnimation animation="fade-up" delay={250}>
                 <p className="font-sans font-light text-base md:text-lg leading-relaxed max-w-lg mb-10 text-foreground/85">
-                  Where architectural excellence meets uncompromising craftsmanship. 30 years of creating Palm Beach's
+                  Where architectural excellence meets uncompromising craftsmanship. 30 years of creating Space Coast's
                   most distinguished estates — custom residences beginning at $5M and rising into the extraordinary.
                 </p>
               </RevealAnimation>
@@ -494,7 +494,7 @@ const Home = () => {
                 {
                   n: "I",
                   title: "Discretion",
-                  body: "Worth Avenue addresses, historic estates, occupied condominiums — handled with the privacy our clients expect. Quiet site protocols, vetted crews, no public reels.",
+                  body: "Riverfront addresses, historic estates, occupied condominiums — handled with the privacy our clients expect. Quiet site protocols, vetted crews, no public reels.",
                 },
                 {
                   n: "II",
@@ -817,7 +817,7 @@ const Home = () => {
             <div className="flex items-center justify-center gap-4 mb-8">
               <span className="h-px w-10 md:w-14 bg-accent/50" />
               <span className="font-sans text-[10px] md:text-xs tracking-[0.35em] uppercase text-accent">
-                By Appointment · Worth Avenue
+                By Appointment · Rockledge
               </span>
               <span className="h-px w-10 md:w-14 bg-accent/50" />
             </div>
@@ -849,9 +849,9 @@ const Home = () => {
 
           <RevealAnimation animation="fade-up" delay={480}>
             <p className="mt-10 font-sans text-[11px] md:text-xs tracking-[0.25em] uppercase text-primary-foreground/55 flex items-center justify-center gap-3 flex-wrap">
-              <a href="tel:+15616468992" className="hover:text-accent transition-colors">(561) 646-8992</a>
+              <a href="tel:+13212984122" className="hover:text-accent transition-colors">(321) 298-4122</a>
               <span aria-hidden className="inline-block w-1 h-1 rounded-full bg-accent/70" />
-              <a href="mailto:aj@bmbpalmbeach.com" className="hover:text-accent transition-colors normal-case tracking-[0.15em]">aj@bmbpalmbeach.com</a>
+              <a href="mailto:ajhoover@mac.com" className="hover:text-accent transition-colors normal-case tracking-[0.15em]">ajhoover@mac.com</a>
               <span aria-hidden className="inline-block w-1 h-1 rounded-full bg-accent/70" />
               <span>205 Worth Ave.</span>
             </p>

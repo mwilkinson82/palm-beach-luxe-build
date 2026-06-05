@@ -12,8 +12,8 @@ const contactPageSchema = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
   name: "Contact Beau Monde Builders",
-  description: "Schedule a private consultation for your luxury custom home in Palm Beach. Contact us at (561) 646-8992 or visit our Worth Avenue office.",
-  url: "https://bmbpalmbeach.com/contact",
+  description: "Schedule a private consultation for your luxury custom home in Space Coast. Contact us at (321) 298-4122 or visit our Rockledge office.",
+  url: "https://bmb-space-coast.lovable.app/contact",
 };
 
 const Contact = () => {
@@ -94,7 +94,7 @@ const Contact = () => {
     <>
       <SEO 
         title="Contact Us"
-          description="Schedule a private consultation with Beau Monde Builders at 205 Worth Avenue, Palm Beach. Call (561) 646-8992. By appointment only."
+          description="Schedule a private consultation with Beau Monde Builders at 1129 Rockledge Blvd, Space Coast. Call (321) 298-4122. By appointment only."
         canonical="/contact"
       />
       <BreadcrumbSchema items={[
@@ -124,7 +124,7 @@ const Contact = () => {
               </div>
               <div className="md:w-1/3">
                 <p className="font-sans text-foreground/70 font-light leading-relaxed text-base md:text-lg">
-                  Our office accepts a limited number of commissions each year. Share your vision and we will respond within twenty-four hours to arrange a private consultation on Worth Avenue.
+                  Our office accepts a limited number of commissions each year. Share your vision and we will respond within twenty-four hours to arrange a private consultation on the Space Coast.
                 </p>
               </div>
             </div>
@@ -163,25 +163,25 @@ const Contact = () => {
 
                 {/* Office info + location card */}
                 <aside className="lg:col-span-5 flex flex-col gap-12 md:gap-16 animate-fade-in" style={{ animationDelay: "200ms" }}>
-                  {/* Unified Palm Beach Office card */}
+                  {/* Unified Space Coast Office card */}
                   <div className="bg-card border border-accent/20 shadow-lifted overflow-hidden">
                     {/* Map */}
                     <a
-                      href="https://www.google.com/maps/place/205+Worth+Ave,+Palm+Beach,+FL+33480"
+                      href="https://www.google.com/maps/place/1129+Rockledge+Blvd,+Rockledge,+FL+32955"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block relative group overflow-hidden border-b border-accent/15"
-                      aria-label="View 205 Worth Avenue on Google Maps"
+                      aria-label="View 1129 Rockledge Blvd on Google Maps"
                     >
                       <div className="aspect-[5/3] w-full overflow-hidden bg-muted">
                         <iframe
-                          src="https://www.google.com/maps?q=205+Worth+Ave,+Palm+Beach,+FL+33480&output=embed"
+                          src="https://www.google.com/maps?q=1129+Rockledge+Blvd,+Rockledge,+FL+32955&output=embed"
                           width="100%"
                           height="100%"
                           style={{ border: 0, pointerEvents: "none" }}
                           loading="lazy"
                           referrerPolicy="no-referrer-when-downgrade"
-                          title="205 Worth Avenue, Palm Beach"
+                          title="1129 Rockledge Blvd, Space Coast"
                           className="w-full h-full"
                         />
                       </div>
@@ -190,9 +190,9 @@ const Contact = () => {
                     <div className="p-8 md:p-10 space-y-8">
                       {/* Address */}
                       <div>
-                        <h2 className="text-[9px] md:text-[10px] tracking-[0.35em] uppercase text-accent font-sans font-medium mb-4">Palm Beach Office</h2>
+                        <h2 className="text-[9px] md:text-[10px] tracking-[0.35em] uppercase text-accent font-sans font-medium mb-4">Space Coast Office</h2>
                         <p className="font-display text-2xl md:text-3xl text-foreground leading-tight">
-                          205 Worth Avenue, Suite 120<br />Palm Beach, FL 33480
+                          1129 Rockledge Blvd<br />Rockledge, FL 32955
                         </p>
                       </div>
 
@@ -201,11 +201,11 @@ const Contact = () => {
                       {/* Phone + Email */}
                       <div>
                         <h4 className="text-[9px] md:text-[10px] tracking-[0.35em] uppercase text-accent font-sans font-medium mb-3">Direct Line</h4>
-                        <a href="tel:+15616468992" className="font-display text-xl md:text-2xl text-foreground hover:text-accent transition-colors duration-500">
-                          (561) 646-8992
+                        <a href="tel:+13212984122" className="font-display text-xl md:text-2xl text-foreground hover:text-accent transition-colors duration-500">
+                          (321) 298-4122
                         </a>
-                        <a href="mailto:aj@bmbpalmbeach.com" className="block font-sans text-sm text-foreground/70 hover:text-accent transition-colors duration-500 mt-1.5 font-light">
-                          aj@bmbpalmbeach.com
+                        <a href="mailto:ajhoover@mac.com" className="block font-sans text-sm text-foreground/70 hover:text-accent transition-colors duration-500 mt-1.5 font-light">
+                          ajhoover@mac.com
                         </a>
                       </div>
 
@@ -225,7 +225,7 @@ const Contact = () => {
 
                       {/* Get Directions */}
                       <a
-                        href="https://www.google.com/maps/dir/?api=1&destination=205+Worth+Avenue%2C+Suite+120%2C+Palm+Beach%2C+FL+33480"
+                        href="https://www.google.com/maps/dir/?api=1&destination=1129+Rockledge+Blvd%2C+Rockledge%2C+FL+32955"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group inline-flex items-center gap-3 text-[10px] tracking-[0.35em] uppercase font-sans font-medium text-foreground hover:text-accent transition-colors duration-500"

@@ -54,7 +54,7 @@ const handler = async (req: Request): Promise<Response> => {
     // Send notification email to the team
     const teamEmailResponse = await resend.emails.send({
       from: "Beau Monde Builders <onboarding@resend.dev>",
-      to: ["aj@bmbpalmbeach.com"],
+      to: ["ajhoover@mac.com"],
       subject: isStyleBook
         ? `Style Book Inquiry — ${style ?? "Unspecified"} — ${fullName}`
         : `New Contact Form Submission from ${fullName}`,
@@ -111,10 +111,10 @@ const handler = async (req: Request): Promise<Response> => {
           </p>
           
           <div style="margin-top: 40px; padding-top: 30px; border-top: 1px solid #eee;">
-            <p style="color: #333; font-weight: 500; margin-bottom: 10px;">Beau Monde Builders Palm Beach</p>
-            <p style="color: #777; font-size: 14px; margin: 5px 0;">205 Worth Avenue, Suite 120</p>
-            <p style="color: #777; font-size: 14px; margin: 5px 0;">Palm Beach, FL 33480</p>
-            <p style="color: #777; font-size: 14px; margin: 5px 0;">(561) 646-8992</p>
+            <p style="color: #333; font-weight: 500; margin-bottom: 10px;">Beau Monde Builders Space Coast</p>
+            <p style="color: #777; font-size: 14px; margin: 5px 0;">1129 Rockledge Blvd</p>
+            <p style="color: #777; font-size: 14px; margin: 5px 0;">Rockledge, FL 32955</p>
+            <p style="color: #777; font-size: 14px; margin: 5px 0;">(321) 298-4122</p>
           </div>
         </div>
       `,
