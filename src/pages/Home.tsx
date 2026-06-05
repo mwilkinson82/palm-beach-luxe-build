@@ -6,7 +6,7 @@ import { Footer } from "@/components/Footer";
 import { RevealAnimation } from "@/components/RevealAnimation";
 import { SplashScreen } from "@/components/SplashScreen";
 import { SEO } from "@/components/SEO";
-import { VideoHero } from "@/components/VideoHero";
+import { WalkthroughVideoHero } from "@/components/WalkthroughVideoHero";
 import { DeliveryShowcase } from "@/components/DeliveryShowcase";
 import { WalkthroughShowcase } from "@/components/WalkthroughShowcase";
 import { WalkthroughGallery, PhotoLightbox, PHOTOS as WALKTHROUGH_PHOTOS } from "@/components/WalkthroughGallery";
@@ -96,8 +96,8 @@ const Home = () => {
 
       <h1 className="sr-only">Beau Monde Builders — Custom Luxury Home Builder in Space Coast</h1>
 
-      {/* Hero Section - Cinematic Video */}
-      <VideoHero />
+      {/* Hero Section — AJ Hoover walkthrough */}
+      <WalkthroughVideoHero />
 
       {/* Founder Walkthrough */}
       <WalkthroughShowcase />

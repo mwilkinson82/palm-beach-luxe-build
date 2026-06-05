@@ -94,7 +94,7 @@ const Contact = () => {
     <>
       <SEO 
         title="Contact Us"
-          description="Schedule a private consultation with Beau Monde Builders at 1129 Rockledge Blvd, Space Coast. Call (321) 298-4122. By appointment only."
+          description="Schedule a private consultation with Beau Monde Builders at 1129 Rockledge Blvd, Rockledge FL. Call (321) 298-4122. By appointment only."
         canonical="/contact"
       />
       <BreadcrumbSchema items={[
