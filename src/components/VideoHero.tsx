@@ -156,7 +156,7 @@ export const VideoHero = ({
         aria-hidden="true"
         width={isMobile ? 1080 : 1920}
         height={isMobile ? 1920 : 1080}
-        fetchpriority="high"
+        fetchPriority="high"
         decoding="async"
         className="absolute inset-0 h-full w-full object-cover"
       />
