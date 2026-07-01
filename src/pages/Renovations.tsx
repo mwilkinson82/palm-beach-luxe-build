@@ -12,6 +12,7 @@ import renovationBefore from "@/assets/renovation-before.jpg.asset.json";
 import renovationAfter from "@/assets/renovation-after.jpg.asset.json";
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import { CinematicReveal } from "@/components/CinematicReveal";
+import { MillionRenovationProjectCarousel } from "@/components/MillionRenovationProjectCarousel";
 
 const services = [
   {
@@ -175,6 +176,8 @@ const Renovations = () => {
             </RevealAnimation>
           </div>
         </section>
+
+        <MillionRenovationProjectCarousel variant="page" />
 
         {/* Text hero */}
         <section className="relative pt-20 pb-20 md:pt-28 md:pb-28 bg-[hsl(var(--seafoam))] border-y border-accent/15">

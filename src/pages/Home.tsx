@@ -11,6 +11,7 @@ import { DeliveryShowcase } from "@/components/DeliveryShowcase";
 import { WalkthroughShowcase } from "@/components/WalkthroughShowcase";
 import { WalkthroughGallery, PhotoLightbox, PHOTOS as WALKTHROUGH_PHOTOS } from "@/components/WalkthroughGallery";
 import { InterviewShowcase } from "@/components/InterviewShowcase";
+import { MillionRenovationProjectCarousel } from "@/components/MillionRenovationProjectCarousel";
 import { BentoTile } from "@/components/BentoTile";
 import { Parallax } from "@/components/Parallax";
 import { ArrowRight, Star } from "lucide-react";
@@ -473,6 +474,8 @@ const Home = () => {
             </div>
           </div>
         </RevealAnimation>
+
+        <MillionRenovationProjectCarousel variant="home" />
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-10 lg:px-12 py-20 md:py-28 lg:py-32">
           {/* Three commitments — applied to renovations */}
