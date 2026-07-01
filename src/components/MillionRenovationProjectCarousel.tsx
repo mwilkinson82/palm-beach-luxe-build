@@ -79,23 +79,6 @@ export const MillionRenovationProjectCarousel = ({
                 </span>
               </h2>
             </div>
-
-            <div className="grid grid-cols-3 gap-4 border-t border-accent/30 pt-5 lg:w-[26rem] lg:shrink-0 lg:border-t-0 lg:border-l lg:pl-8 lg:pt-0">
-              {[
-                { k: "Lead", v: `IMG-${photos[0].number}` },
-                { k: "Value", v: MILLION_RENOVATION_PROJECT.value },
-                { k: "Gallery", v: `${photos.length} Photos` },
-              ].map((detail) => (
-                <div key={detail.k}>
-                  <div className="font-sans text-[9px] md:text-[10px] tracking-[0.3em] uppercase text-accent mb-1">
-                    {detail.k}
-                  </div>
-                  <div className="font-display text-xl md:text-2xl text-primary leading-none whitespace-nowrap">
-                    {detail.v}
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </RevealAnimation>
 
@@ -120,16 +103,10 @@ export const MillionRenovationProjectCarousel = ({
                           className="absolute inset-0 h-full w-full object-contain"
                         />
                         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-primary/70 via-primary/15 to-transparent" />
-                        <figcaption className="absolute left-5 bottom-5 md:left-8 md:bottom-8 flex items-center gap-3 text-primary-foreground/90">
-                          <span className="h-px w-8 md:w-12 bg-accent" />
-                          <span className="font-sans text-[10px] md:text-xs tracking-[0.35em] uppercase">
-                            IMG-{photo.number}
-                          </span>
-                        </figcaption>
                         <button
                           type="button"
                           onClick={() => setLightboxIndex(index)}
-                          aria-label={`Open IMG-${photo.number} in full screen`}
+                          aria-label={`Open photo ${index + 1} in full screen`}
                           className="absolute right-4 top-4 md:right-6 md:top-6 flex h-11 w-11 items-center justify-center border border-primary-foreground/35 bg-primary/45 text-primary-foreground backdrop-blur-sm transition-colors duration-300 hover:border-accent hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent/70"
                         >
                           <Maximize2 className="h-4 w-4" strokeWidth={1.4} />
@@ -174,9 +151,6 @@ export const MillionRenovationProjectCarousel = ({
                   / {String(photos.length).padStart(2, "0")}
                 </span>
               </div>
-              <div className="font-sans text-[10px] md:text-xs tracking-[0.35em] uppercase text-primary/70">
-                Current frame · IMG-{selectedPhoto.number}
-              </div>
             </div>
 
             <div className="flex gap-2 md:gap-3 overflow-x-auto pb-2">
@@ -187,7 +161,7 @@ export const MillionRenovationProjectCarousel = ({
                     key={photo.number}
                     type="button"
                     onClick={() => scrollTo(index)}
-                    aria-label={`Show IMG-${photo.number}`}
+                    aria-label={`Show photo ${index + 1}`}
                     aria-current={active}
                     className={cn(
                       "relative flex-shrink-0 w-20 md:w-28 lg:w-32 aspect-[4/3] overflow-hidden border bg-primary transition-all duration-300",
@@ -276,8 +250,7 @@ const ProjectPhotoLightbox = ({
         onClick={(event) => event.stopPropagation()}
       >
         <span className="font-sans uppercase text-[10px] md:text-xs tracking-[0.35em]">
-          IMG-{photos[current].number} · {String(current + 1).padStart(2, "0")} /{" "}
-          {String(total).padStart(2, "0")}
+          {String(current + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
         </span>
         <button
           type="button"
@@ -346,7 +319,7 @@ const ProjectPhotoLightbox = ({
                 key={photo.number}
                 type="button"
                 onClick={() => setCurrent(index)}
-                aria-label={`Show IMG-${photo.number}`}
+                aria-label={`Show photo ${index + 1}`}
                 aria-current={active}
                 className={cn(
                   "group relative flex-shrink-0 w-24 md:w-32 aspect-[3/2] bg-black overflow-hidden border transition-all duration-300",
