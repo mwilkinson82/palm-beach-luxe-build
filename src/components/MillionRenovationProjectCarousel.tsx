@@ -29,7 +29,6 @@ export const MillionRenovationProjectCarousel = ({
   const [api, setApi] = useState<CarouselApi>();
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
-  const selectedPhoto = photos[selectedIndex] ?? photos[0];
 
   useEffect(() => {
     if (!api) return;
