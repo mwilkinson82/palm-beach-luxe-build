@@ -2,8 +2,9 @@
 import { createClient } from '@supabase/supabase-js';
 import type { Database } from './types';
 
-const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
-const SUPABASE_PUBLISHABLE_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
+// Public browser configuration from the existing site; permissions remain enforced by RLS.
+const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL || "https://lhyqedknyxkipldzvmdi.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxoeXFlZGtueXhraXBsZHp2bWRpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjkxMDI4MzUsImV4cCI6MjA4NDY3ODgzNX0.Mi4xwgsOeIizqahm1BHeNo7U1xe7u6252ULvMpfRwvY";
 
 // Import the supabase client like this:
 // import { supabase } from "@/integrations/supabase/client";
