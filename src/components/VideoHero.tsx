@@ -59,35 +59,60 @@ export const VideoHero = ({
 
     setReady(false);
     let hls: Hls | null = null;
+    let disposed = false;
+    let usingMp4 = false;
+
+    const play = () => {
+      video.play().catch((error: DOMException) => {
+        if (!disposed && error.name !== "AbortError") {
+          console.warn("Hero video playback did not start:", error.name);
+        }
+      });
+    };
+
+    const fallbackToMp4 = () => {
+      if (disposed || usingMp4) return;
+      usingMp4 = true;
+      hls?.destroy();
+      hls = null;
+      video.src = source.mp4;
+      play();
+    };
 
     const onPlaying = () => setReady(true);
     video.addEventListener("playing", onPlaying);
+    video.addEventListener("error", fallbackToMp4);
 
-    // Safari plays HLS natively; everyone else needs hls.js
-    if (video.canPlayType("application/vnd.apple.mpegurl")) {
-      video.src = source.hls;
-    } else if (Hls.isSupported()) {
+    // Chrome also reports native HLS support; prefer the tested MSE player.
+    if (Hls.isSupported()) {
       hls = new Hls({ enableWorker: true, lowLatencyMode: false });
+      hls.on(Hls.Events.MANIFEST_PARSED, play);
+      hls.on(Hls.Events.ERROR, (_e, data) => {
+        if (data.fatal) fallbackToMp4();
+      });
       hls.loadSource(source.hls);
       hls.attachMedia(video);
-      hls.on(Hls.Events.ERROR, (_e, data) => {
-        if (data.fatal) {
-          // Fall back to direct MP4 if HLS fails
-          hls?.destroy();
-          hls = null;
-          video.src = source.mp4;
-          video.play().catch(() => {});
-        }
-      });
+    } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
+      video.src = source.hls;
+      play();
     } else {
-      video.src = source.mp4;
+      fallbackToMp4();
     }
 
-    video.play().catch(() => {});
+    // Native HLS can stall without raising an error. Recover if no frame loads.
+    const startupTimeout = window.setTimeout(() => {
+      if (video.readyState < HTMLMediaElement.HAVE_CURRENT_DATA) fallbackToMp4();
+    }, 15000);
 
     return () => {
+      disposed = true;
+      window.clearTimeout(startupTimeout);
       video.removeEventListener("playing", onPlaying);
+      video.removeEventListener("error", fallbackToMp4);
       hls?.destroy();
+      video.pause();
+      video.removeAttribute("src");
+      video.load();
     };
   }, [source, reducedMotion]);
 
@@ -168,6 +193,7 @@ export const VideoHero = ({
           muted
           loop
           playsInline
+          disableRemotePlayback
           poster={source.poster}
           className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-[1200ms] ease-out ${
             mounted && ready ? "opacity-100" : "opacity-0"
