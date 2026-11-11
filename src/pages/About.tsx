@@ -219,7 +219,7 @@ const About = () => {
                     </span>
                   </div>
                   <p className="font-display text-primary text-xl md:text-2xl leading-[1.55]">
-                    30 years on, AJ still walks every job and signs every
+                    With 30 years in the construction industry, AJ still walks every job and signs every
                     standard — now backed by a technology stack that gives
                     owners full transparency into daily logs, CPM schedules,
                     and the selection process from dream board through
@@ -345,13 +345,13 @@ const About = () => {
                   </h2>
                   <p className="font-sans font-light text-base md:text-lg text-muted-foreground leading-relaxed mb-10">
                     AJ holds the Florida Certified Master Builder designation —
-                    an elite voluntary credential earned through 30 years of
-                    proven work, impeccable ethics, and unbroken client trust.
+                    an elite voluntary credential. He has 30 years in the
+                    construction industry, impeccable ethics, and unbroken client trust.
                   </p>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 border-t border-accent/20">
                     {[
-                      { Icon: Award, k: "30 Years Experience", v: "Proven industry tenure." },
+                      { Icon: Award, k: "30 Years in Construction (AJ Hoover)", v: "His career in the industry." },
                       { Icon: Shield, k: "Clean Record", v: "No regulatory issues." },
                       { Icon: Users, k: "Verified References", v: "Owner & subcontractor." },
                       { Icon: FileCheck, k: "Written Warranty", v: "Minimum one-year coverage." },

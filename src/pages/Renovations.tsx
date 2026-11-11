@@ -60,7 +60,7 @@ const propertyTypes = [
 const areasServed = ["Palm Beach Island", "West Palm Beach", "Jupiter Island", "Singer Island"];
 
 const fcmbCredentials = [
-  { k: "Experience", v: "30 years of Palm Beach building" },
+  { k: "Experience", v: "AJ Hoover, 30 years in construction" },
   { k: "Record", v: "Clean regulatory and disciplinary history" },
   { k: "References", v: "Verified by clients and subcontractors" },
   { k: "Warranty", v: "Written, minimum one-year guarantee" },
@@ -195,7 +195,7 @@ const Renovations = () => {
                 </h1>
 
                 <p className="font-sans font-light text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mb-12">
-                  30 years of discreet, master-built craftsmanship — now applied to the
+                  Led by AJ Hoover, with 30 years in the construction industry — now applied to the
                   residences you already love. Every renovation is led personally, scheduled
                   around your life, and finished to the same standard as our ground-up estates.
                 </p>

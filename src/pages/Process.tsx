@@ -206,9 +206,9 @@ const Process = () => {
               >
                 <RevealAnimation animation="fade-up" delay={620}>
                   <p className="font-sans font-light text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
-                    30 years of master-built craft, distilled into a private,
-                    measured cadence — from the first quiet conversation to the day
-                    we hand you the keys.
+                    Led by AJ Hoover, with 30 years in the construction industry,
+                    distilled into a private, measured cadence — from the first quiet
+                    conversation to the day we hand you the keys.
                   </p>
                 </RevealAnimation>
 

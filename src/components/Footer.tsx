@@ -21,7 +21,8 @@ export const Footer = () => {
             </div>
             <p className="text-sm font-light leading-relaxed max-w-sm text-primary-foreground/70">
               Creating Palm Beach's most distinguished estates through architectural excellence
-              and uncompromising craftsmanship since 1994.
+              and uncompromising craftsmanship. Led by AJ Hoover, with 30 years in the construction
+              industry. Beau Monde Builders, founded 2015.
             </p>
           </div>
 
@@ -138,7 +139,7 @@ export const Footer = () => {
               {[
                 { eyebrow: "Accredited", line: "Fully Insured" },
                 { eyebrow: "State Registered", line: "FL Licensed Contractor" },
-              { eyebrow: "Established", line: "30 Years · Since 1994" },
+              { eyebrow: "Established", line: "Beau Monde Builders · Est. 2015" },
               ].map((c, i, arr) => (
                 <div key={c.eyebrow} className="flex items-center gap-x-12">
                   <div className="text-center">

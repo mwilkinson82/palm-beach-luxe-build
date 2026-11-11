@@ -211,8 +211,9 @@ const palmBeachBusiness = {
     "@type": "ImageObject",
     url: `${SITE}/favicon.png`,
   },
+  foundingDate: "2015",
   description:
-    "Beau Monde Builders is a custom home builder and renovation firm. The Palm Beach office is at 205 Worth Avenue, Suite 120, Palm Beach, Florida. Headquarters is in Rockledge, Florida.",
+    "Beau Monde Builders is a custom home builder and renovation firm founded in 2015. The Palm Beach office is at 205 Worth Avenue, Suite 120, Palm Beach, Florida. Headquarters is in Rockledge, Florida. AJ Hoover, the chief executive, has 30 years in the construction industry.",
   telephone: PALM_BEACH_PHONE,
   email: PUBLIC_EMAIL,
   address: postalAddress(PALM_BEACH),
@@ -251,8 +252,9 @@ const parentOrganization = {
   "@id": IDS.parent,
   name: SITE_NAME,
   url: "https://www.bmb.builders/",
+  foundingDate: "2015",
   description:
-    "Beau Monde Builders headquarters at 1129 Rockledge Blvd, Suite 101, Rockledge, Florida. The Palm Beach office is a separate site at bmbpalmbeach.com.",
+    "Beau Monde Builders, founded in 2015, is headquartered at 1129 Rockledge Blvd, Suite 101, Rockledge, Florida. The Palm Beach office is a separate site at bmbpalmbeach.com.",
   telephone: ROCKLEDGE_PHONE,
   address: postalAddress(ROCKLEDGE),
   hasMap: REVIEW_LINKS.googleRockledge.href,
@@ -265,7 +267,7 @@ const person = {
   name: "AJ Hoover",
   jobTitle: "Chief Executive Officer",
   description:
-    "AJ Hoover is chief executive of Beau Monde Builders and a Florida Certified Building Contractor, license CBC1260651.",
+    "AJ Hoover is chief executive of Beau Monde Builders, with 30 years in the construction industry. He is a Florida Certified Building Contractor, license CBC1260651. Beau Monde Builders was founded in 2015.",
   image: absoluteUrl(ajPortrait.url),
   telephone: PALM_BEACH_PHONE,
   email: PUBLIC_EMAIL,

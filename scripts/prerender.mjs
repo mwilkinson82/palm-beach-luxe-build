@@ -116,8 +116,22 @@ function assertFile(file, { must = [], mustNot = [], h1 = 1, types = [] }) {
     if (serialized.includes("aggregateRating") || serialized.includes("reviewCount")) {
       throw new Error(`${file} JSON-LD still publishes a review aggregate`);
     }
-    if (serialized.includes('"1994"')) {
-      throw new Error(`${file} JSON-LD still publishes founding year 1994`);
+    if (serialized.includes('"1994"') || /1994/.test(serialized)) {
+      throw new Error(`${file} JSON-LD still publishes 1994`);
+    }
+    if (!serialized.includes('"foundingDate":"2015"')) {
+      throw new Error(`${file} JSON-LD is missing foundingDate 2015`);
+    }
+    const visible = html
+      .replace(/<script[\s\S]*?<\/script>/gi, " ")
+      .replace(/https?:\/\/[^\s"'<>]+/g, " ")
+      .replace(/\/__l5e\/[^\s"'<>]+/g, " ")
+      .replace(/<[^>]+>/g, " ");
+    if (visible.includes("1994")) {
+      throw new Error(`${file} still says 1994`);
+    }
+    if (/30 years of beau monde/i.test(visible)) {
+      throw new Error(`${file} still says 30 years of Beau Monde`);
     }
     walk(block, (node) => {
       typesOf(node).forEach((type) => found.add(type));
@@ -165,6 +179,12 @@ assertFile(home, {
     "instagram.com/beaumondebuilders",
     "linkedin.com/company/beaumondebuilders",
     "youtube.com/@beaumondebuilders",
+    "$150M",
+    "$5M",
+    "25+",
+    "Years Excellence",
+    "Project Value",
+    "Estate Homes",
   ],
   types: [
     "HomeAndConstructionBusiness",
