@@ -51,7 +51,7 @@ const EMBLEM_MEANINGS = [
 ];
 
 const FCMB_CREDENTIALS = [
-  { k: "Experience", v: "AJ Hoover, 30 years in construction" },
+  { k: "Experience", v: "30 years of proven industry practice, led by AJ Hoover" },
   { k: "Record", v: "Clean regulatory and disciplinary history" },
   { k: "References", v: "Verified by clients and subcontractors" },
   { k: "Warranty", v: "Written, minimum one-year guarantee" },
