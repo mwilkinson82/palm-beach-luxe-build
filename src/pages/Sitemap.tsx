@@ -3,7 +3,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { RevealAnimation } from "@/components/RevealAnimation";
-import { Home, Users, Cog, Image, Newspaper, Share2, Mail, FileText, Shield, Hammer } from "lucide-react";
+import { Home, Users, Cog, Image, Share2, Mail, FileText, Shield, Hammer } from "lucide-react";
 
 const sitemapSections = [
   {
@@ -21,7 +21,6 @@ const sitemapSections = [
   {
     title: "Media & Social",
     links: [
-      { name: "Press", path: "/press", icon: Newspaper, description: "Placeholder page. Coverage has not been posted." },
       { name: "Social Media", path: "/social", icon: Share2, description: "Connect with us online" },
     ]
   },
