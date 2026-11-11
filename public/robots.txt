@@ -1,13 +1,50 @@
-# Beau Monde Builders - robots.txt
-# https://beaumondebuilders.com
+# Beau Monde Builders Palm Beach
+# https://bmbpalmbeach.com
+# llms.txt: https://bmbpalmbeach.com/llms.txt
+
+User-agent: GPTBot
+Allow: /
+Disallow: /unsubscribe
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /unsubscribe
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /unsubscribe
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /unsubscribe
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /unsubscribe
+
+User-agent: Claude-Web
+Allow: /
+Disallow: /unsubscribe
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /unsubscribe
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /unsubscribe
 
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 1
+Disallow: /unsubscribe
 
 User-agent: Bingbot
 Allow: /
-Crawl-delay: 1
+Disallow: /unsubscribe
+
+User-agent: CCBot
+Allow: /
+Disallow: /unsubscribe
 
 User-agent: Twitterbot
 Allow: /
@@ -18,37 +55,8 @@ Allow: /
 User-agent: LinkedInBot
 Allow: /
 
-User-agent: Slurp
-Allow: /
-
-User-agent: DuckDuckBot
-Allow: /
-
-# AI Crawlers for GEO optimization
-User-agent: GPTBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-User-agent: CCBot
-Allow: /
-
-User-agent: anthropic-ai
-Allow: /
-
-User-agent: Claude-Web
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
 User-agent: *
 Allow: /
-Disallow: /api/
+Disallow: /unsubscribe
 
-# Sitemap location
 Sitemap: https://bmbpalmbeach.com/sitemap.xml

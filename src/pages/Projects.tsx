@@ -5,8 +5,7 @@ import HTMLFlipBook from "react-pageflip";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { SEO, BreadcrumbSchema } from "@/components/SEO";
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
@@ -106,7 +105,6 @@ const slugify = (s: string) =>
   s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
 const projectsSchema = {
-  "@context": "https://schema.org",
   "@type": "ItemList",
   name: "Beau Monde Builders — Style Studies",
   description:
@@ -877,31 +875,44 @@ const ScrollFallback = () => (
   </div>
 );
 
+const CrawlableStyles = () => {
+  const [clientReady, setClientReady] = useState(false);
+  useEffect(() => setClientReady(true), []);
+  if (clientReady) return null;
+  return (
+    <div className="sr-only">
+      <ScrollFallback />
+    </div>
+  );
+};
+
 const Projects = () => {
   const prefersReducedMotion = useReducedMotion();
 
   return (
     <>
       <SEO
-        title="Find Your Style"
-        description="Ten design idioms — Oceanfront, Mediterranean, Bermuda Colonial, Transitional and more — that shape Beau Monde's bespoke Palm Beach residences."
-        canonical="/projects"
-      />
-      <BreadcrumbSchema
-        items={[
-          { name: "Home", url: "/" },
-          { name: "Find Your Style", url: "/projects" },
+        title="Palm Beach Home Styles | Beau Monde Builders"
+        description="Style studies from Beau Monde Builders: oceanfront, Mediterranean, Bermuda colonial, transitional, and other Palm Beach residences."
+        path="/projects"
+        pageType="CollectionPage"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Your Style", path: "/projects" },
         ]}
+        extraJsonLd={[projectsSchema]}
       />
-      <Helmet>
-        <script type="application/ld+json">
-          {JSON.stringify(projectsSchema)}
-        </script>
-      </Helmet>
       <div className="min-h-screen bg-background text-primary">
         <Navigation />
         <main className="pt-20 md:pt-24">
-          {prefersReducedMotion ? <ScrollFallback /> : <FlipBookView />}
+          {prefersReducedMotion ? (
+            <ScrollFallback />
+          ) : (
+            <>
+              <CrawlableStyles />
+              <FlipBookView />
+            </>
+          )}
         </main>
         <Footer />
       </div>

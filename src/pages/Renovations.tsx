@@ -3,7 +3,8 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { RevealAnimation } from "@/components/RevealAnimation";
 import { SEO } from "@/components/SEO";
-import { Helmet } from "react-helmet-async";
+import { DraftFaq } from "@/components/DraftFaq";
+import { IDS, RENOVATION_FAQS } from "@/lib/site";
 import { RenovationsHero } from "@/components/RenovationsHero";
 import renovationMoment from "@/assets/projects/renovation-hero.jpg.asset.json";
 import fcmbLogo from "@/assets/fcmb-logo.png";
@@ -69,27 +70,21 @@ const ctaClass =
   "group relative inline-flex items-center justify-center bg-primary text-primary-foreground px-12 md:px-16 py-5 text-[10px] md:text-[11px] font-sans font-light tracking-[0.3em] uppercase ring-1 ring-inset ring-accent/30 hover:ring-accent/60 transition-all duration-500 hover:-translate-y-px hover:shadow-[0_18px_40px_-20px_hsl(var(--primary)/0.55)]";
 
 const Renovations = () => {
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://bmbpalmbeach.com/" },
-      { "@type": "ListItem", position: 2, name: "Renovations", item: "https://bmbpalmbeach.com/renovations" },
-    ],
-  };
-
   const serviceSchema = {
-    "@context": "https://schema.org",
     "@type": "Service",
-    serviceType: "Luxury Renovation",
-    provider: { "@id": "https://bmbpalmbeach.com/#localbusiness" },
-    areaServed: areasServed.map((a) => ({ "@type": "Place", name: a })),
+    "@id": "https://bmbpalmbeach.com/renovations#service",
+    name: "Palm Beach home renovation",
+    serviceType: "Home renovation",
+    url: "https://bmbpalmbeach.com/renovations",
+    provider: { "@id": IDS.palmBeach },
+    areaServed: areasServed.map((area) => ({ "@type": "Place", name: area })),
+    description: "Whole-home, condominium, kitchen, and bath renovations.",
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Renovation Services",
-      itemListElement: services.map((s) => ({
+      name: "Renovation services",
+      itemListElement: services.map((service) => ({
         "@type": "Offer",
-        itemOffered: { "@type": "Service", name: s.title, description: s.description },
+        itemOffered: { "@type": "Service", name: service.title, description: service.description },
       })),
     },
   };
@@ -97,14 +92,16 @@ const Renovations = () => {
   return (
     <>
       <SEO
-        title="Luxury Renovations | Beau Monde Builders Palm Beach"
-        canonical="/renovations"
-        description="Palm Beach's premier luxury renovation specialists. Discreet, full-service condominium and estate renovations by Florida Certified Master Builders."
+        title="Palm Beach Home Renovations | Beau Monde Builders"
+        path="/renovations"
+        description="Whole-home, condominium, kitchen, and bath renovations by Beau Monde Builders on Palm Beach Island, in West Palm Beach, on Jupiter Island, and on Singer Island."
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Renovations", path: "/renovations" },
+        ]}
+        faq={RENOVATION_FAQS}
+        extraJsonLd={[serviceSchema]}
       />
-      <Helmet>
-        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
-      </Helmet>
 
       <div className="min-h-screen bg-background">
         <Navigation />
@@ -464,6 +461,17 @@ const Renovations = () => {
             </div>
           </div>
         </section>
+
+        <DraftFaq
+          items={RENOVATION_FAQS}
+          headingId="renovation-faq-heading"
+          sectionId="renovation-faq"
+          related={[
+            { href: "/contact", label: "Contact" },
+            { href: "/process", label: "Process" },
+            { href: "/", label: "Home" },
+          ]}
+        />
 
         {/* Closing CTA */}
         <section className="py-24 md:py-32">

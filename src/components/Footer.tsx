@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import fcmbLogo from "@/assets/fcmb-logo.png";
 import nahbBadge from "@/assets/nahb-master-building-professional.png.asset.json";
+import { SERVICE_AREAS } from "@/lib/site";
 
 export const Footer = () => {
   return (
@@ -49,11 +50,19 @@ export const Footer = () => {
           <div className="md:col-span-3">
             <h4 className="text-[11px] uppercase tracking-[0.3em] text-accent font-semibold mb-6">Services</h4>
             <ul className="space-y-3 text-sm font-light text-primary-foreground/75">
-              <li>Custom Home Design</li>
-              <li>Architectural Planning</li>
-              <li>Luxury Construction</li>
-              <li>Project Management</li>
-              <li>Interior Design</li>
+              {[
+                { label: "Custom Home Design", path: "/projects" },
+                { label: "Architectural Planning", path: "/process" },
+                { label: "Luxury Construction", path: "/projects" },
+                { label: "Project Management", path: "/process" },
+                { label: "Interior Design", path: "/renovations" },
+              ].map((item) => (
+                <li key={item.label}>
+                  <Link to={item.path} className="hover:text-primary-foreground transition-colors">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -74,6 +83,19 @@ export const Footer = () => {
                 <a href="mailto:aj@bmbpalmbeach.com" className="hover:text-primary-foreground transition-colors">
                   aj@bmbpalmbeach.com
                 </a>
+              </p>
+              <p className="text-xs leading-relaxed">
+                {SERVICE_AREAS.map((area, index) => (
+                  <span key={area}>
+                    {index > 0 && " · "}
+                    <Link
+                      to={area === "Palm Beach" ? "/contact" : "/renovations"}
+                      className="hover:text-primary-foreground transition-colors"
+                    >
+                      {area}
+                    </Link>
+                  </span>
+                ))}
               </p>
             </address>
           </div>

@@ -6,10 +6,14 @@ import { RevealAnimation } from "@/components/RevealAnimation";
 const Terms = () => {
   return (
     <>
-      <SEO 
-        title="Terms of Service"
-        canonical="/terms"
-        description="Terms and conditions governing use of the Beau Monde Builders website and engagement of our Palm Beach luxury homebuilding services."
+      <SEO
+        title="Terms of Service | Beau Monde Builders Palm Beach"
+        path="/terms"
+        description="Terms for using the Beau Monde Builders Palm Beach website and for contacting the Worth Avenue office."
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Terms", path: "/terms" },
+        ]}
       />
       <div className="min-h-screen bg-background">
         <Navigation />

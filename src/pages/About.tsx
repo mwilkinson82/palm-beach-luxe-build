@@ -4,7 +4,8 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { RevealAnimation } from "@/components/RevealAnimation";
-import { SEO, PersonSchema, BreadcrumbSchema } from "@/components/SEO";
+import { SEO } from "@/components/SEO";
+import { IDS } from "@/lib/site";
 import { Award, Shield, Users, FileCheck } from "lucide-react";
 import ajImageAsset from "@/assets/aj-hoover-v3.png.asset.json";
 import fcmbLogo from "@/assets/fcmb-logo.png";
@@ -36,21 +37,17 @@ const About = () => {
 
   return (
     <>
-      <SEO 
-        title="About AJ Hoover & Our Team"
-        description="Meet AJ Hoover, Florida Certified Master Builder and CEO of Beau Monde Builders. 30 years of excellence in luxury custom home building in Palm Beach."
-        canonical="/about"
+      <SEO
+        title="AJ Hoover and Beau Monde Builders | Palm Beach"
+        description="AJ Hoover is chief executive of Beau Monde Builders and a Florida Certified Building Contractor (CBC1260651). The Palm Beach office is at 205 Worth Avenue."
+        path="/about"
+        pageType="AboutPage"
+        mainEntityId={IDS.person}
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "About", path: "/about" },
+        ]}
       />
-      <PersonSchema 
-        name="AJ Hoover"
-        jobTitle="CEO & Founder"
-        description="Florida Certified Master Builder with 30 years of experience in luxury custom home building. Founder of Beau Monde Builders, Palm Beach's premier luxury home builder."
-        image="https://beaumondebuilders.com/assets/aj-hoover.png"
-      />
-      <BreadcrumbSchema items={[
-        { name: "Home", url: "/" },
-        { name: "About", url: "/about" }
-      ]} />
       <div className="min-h-screen bg-background">
         <Navigation />
 

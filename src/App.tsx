@@ -21,6 +21,28 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+export const AppRoutes = () => (
+  <>
+    <ScrollToTop />
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/process" element={<Process />} />
+      <Route path="/projects" element={<Projects />} />
+      <Route path="/renovations" element={<Renovations />} />
+      <Route path="/press" element={<Press />} />
+      <Route path="/social" element={<Social />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/privacy" element={<Privacy />} />
+      <Route path="/terms" element={<Terms />} />
+      <Route path="/sitemap" element={<Sitemap />} />
+      <Route path="/unsubscribe" element={<Unsubscribe />} />
+      {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  </>
+);
+
 const App = () => (
   <HelmetProvider>
     <QueryClientProvider client={queryClient}>
@@ -28,23 +50,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          <ScrollToTop />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/process" element={<Process />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/renovations" element={<Renovations />} />
-            <Route path="/press" element={<Press />} />
-            <Route path="/social" element={<Social />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/privacy" element={<Privacy />} />
-            <Route path="/terms" element={<Terms />} />
-            <Route path="/sitemap" element={<Sitemap />} />
-            <Route path="/unsubscribe" element={<Unsubscribe />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <AppRoutes />
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>

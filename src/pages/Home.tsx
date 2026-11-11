@@ -6,6 +6,8 @@ import { Footer } from "@/components/Footer";
 import { RevealAnimation } from "@/components/RevealAnimation";
 import { SplashScreen } from "@/components/SplashScreen";
 import { SEO } from "@/components/SEO";
+import { DraftFaq } from "@/components/DraftFaq";
+import { HOME_FAQS, REVIEW_LINKS } from "@/lib/site";
 import { VideoHero } from "@/components/VideoHero";
 import { DeliveryShowcase } from "@/components/DeliveryShowcase";
 import { WalkthroughShowcase } from "@/components/WalkthroughShowcase";
@@ -79,9 +81,12 @@ const Home = () => {
 
   return (
     <>
-      <SEO 
-        canonical="/"
-        description="Beau Monde Builders — Florida's premier custom luxury home builder on Worth Avenue, Palm Beach. 30 years crafting bespoke oceanfront estates."
+      <SEO
+        title="Beau Monde Builders Palm Beach | Custom Homes and Renovations"
+        description="Beau Monde Builders designs and builds custom homes and renovations from 205 Worth Avenue, Suite 120, Palm Beach, Florida. Call (561) 646-8992."
+        path="/"
+        breadcrumbs={[{ name: "Home", path: "/" }]}
+        faq={HOME_FAQS}
       />
       
       {/* Splash Screen */}
@@ -300,7 +305,19 @@ const Home = () => {
                     ))}
                   </div>
                   <span className="font-sans text-[10px] uppercase tracking-widest text-foreground/60">
-                    50+ Reviews · Google Verified
+                    50+ reviews across{" "}
+                    <a href={REVIEW_LINKS.googleRockledge.href} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+                      {REVIEW_LINKS.googleRockledge.label}
+                    </a>
+                    {", "}
+                    <a href={REVIEW_LINKS.googlePalmBeach.href} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+                      {REVIEW_LINKS.googlePalmBeach.label}
+                    </a>
+                    {", "}
+                    <a href={REVIEW_LINKS.houzz.href} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+                      {REVIEW_LINKS.houzz.label}
+                    </a>
+                    {", Yelp and more"}
                   </span>
                 </div>
               </RevealAnimation>
@@ -804,6 +821,17 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <DraftFaq
+        items={HOME_FAQS}
+        headingId="home-faq-heading"
+        related={[
+          { href: "/process", label: "Process" },
+          { href: "/projects", label: "Your Style" },
+          { href: "/renovations", label: "Renovations" },
+          { href: "/contact", label: "Contact" },
+        ]}
+      />
 
       {/* Closing CTA — full-width navy invitation */}
       <section

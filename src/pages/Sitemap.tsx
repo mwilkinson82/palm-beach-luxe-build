@@ -3,7 +3,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { RevealAnimation } from "@/components/RevealAnimation";
-import { Home, Users, Cog, Image, Newspaper, Share2, Mail, FileText, Shield } from "lucide-react";
+import { Home, Users, Cog, Image, Newspaper, Share2, Mail, FileText, Shield, Hammer } from "lucide-react";
 
 const sitemapSections = [
   {
@@ -13,6 +13,8 @@ const sitemapSections = [
       { name: "About Us", path: "/about", icon: Users, description: "Meet AJ Hoover and our team" },
       { name: "Our Process", path: "/process", icon: Cog, description: "Our 9-step luxury building process" },
       { name: "Your Style", path: "/projects", icon: Image, description: "Explore architectural styles" },
+      { name: "Renovations", path: "/renovations", icon: Hammer, description: "Whole-home, condo, kitchen, and bath work" },
+      { name: "Questions", path: "/#faq", icon: FileText, description: "Draft answers about the Palm Beach office" },
       { name: "Contact", path: "/contact", icon: Mail, description: "Get in touch with us" },
     ]
   },
@@ -35,10 +37,14 @@ const sitemapSections = [
 const Sitemap = () => {
   return (
     <>
-      <SEO 
-        title="Sitemap"
-        canonical="/sitemap"
-        description="Complete directory of pages on the Beau Monde Builders website — services, portfolio, renovations, and contact information."
+      <SEO
+        title="Sitemap | Beau Monde Builders Palm Beach"
+        path="/sitemap"
+        description="Directory of pages on the Beau Monde Builders Palm Beach website: services, styles, renovations, and contact."
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Sitemap", path: "/sitemap" },
+        ]}
       />
       <div className="min-h-screen bg-background">
         <Navigation />

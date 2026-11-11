@@ -1,21 +1,40 @@
-# Beau Monde Builders
+# Beau Monde Builders Palm Beach
 
-> Ultra-luxury custom home builder and renovator on Worth Avenue, Palm Beach. 30 years of bespoke residences led by AJ Hoover, Florida Certified Master Builder.
+> Custom home builder and renovation firm. Palm Beach office: 205 Worth Avenue, Suite 120, Palm Beach, FL 33480. Phone: (561) 646-8992. Email: aj@bmbpalmbeach.com. Headquarters: 1129 Rockledge Blvd, Suite 101, Rockledge, FL 32955. Parent site: https://www.bmb.builders/
 
-Beau Monde Builders designs and constructs custom oceanfront and waterfront estates throughout Palm Beach, West Palm Beach, Jupiter Island, and Palm Beach County. The firm also performs discreet whole-home and luxury condominium renovations.
+AJ Hoover is chief executive and a Florida Certified Building Contractor, license CBC1260651.
+
+The site states 50+ reviews across Google, Houzz, Yelp, and more. It does not publish a star rating or a per-platform count.
+
+## Services
+
+- Custom home building
+- Renovations: whole home, condominium, kitchen, and bath
+
+## Service areas named on this site
+
+- Palm Beach
+- Palm Beach Island
+- West Palm Beach
+- Jupiter Island
+- Singer Island
+- Palm Beach County
 
 ## Pages
 
-- [Home](/): Overview of Beau Monde Builders, the Beau Monde Standard, and a featured residence walkthrough.
-- [About](/about): Firm history, AJ Hoover, and the Florida Certified Master Builder credential.
-- [Process](/process): The nine-step Beau Monde process from consultation to delivery.
-- [Portfolio](/projects): Style Book of completed custom homes and architectural directions.
-- [Renovations](/renovations): Luxury condo, estate, kitchen, and bath renovation services.
-- [Press](/press): Media coverage and recognition.
-- [Contact](/contact): Schedule a private consultation. (561) 646-8992 · 205 Worth Avenue, Palm Beach.
+- [Home](/): Office, services, and a draft FAQ for review.
+- [About](/about): AJ Hoover and the Palm Beach team.
+- [Process](/process): The nine-step custom home process.
+- [Your Style](/projects): Architectural styles used for Palm Beach residences.
+- [Renovations](/renovations): Whole-home, condominium, kitchen, and bath work, with the renovation FAQ.
+- [Contact](/contact): 205 Worth Avenue, Suite 120, Palm Beach, FL 33480. (561) 646-8992. By appointment.
+- [Press](/press): Placeholder page. Coverage is still being added.
+- [Social](/social): Instagram @bmbbuilders, plus the firm's Facebook, LinkedIn, and YouTube profiles.
+- [Sitemap](/sitemap): Page index.
 
-## Optional
+## Questions a reader can quote
 
-- [Sitemap](/sitemap): Full index of pages.
-- [Privacy Policy](/privacy)
-- [Terms of Service](/terms)
+Draft copy, pending AJ Hoover's review, is on the home page at /#faq and on /renovations#renovation-faq.
+
+- Who builds custom homes in Palm Beach?
+- What does a Palm Beach renovation involve?

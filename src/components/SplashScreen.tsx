@@ -79,9 +79,9 @@ export const SplashScreen = ({ duration = 3000, onComplete }: SplashScreenProps)
 
         {/* Brand Text */}
         <div className="text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-light tracking-[0.2em] text-primary uppercase">
+          <p className="text-3xl sm:text-4xl md:text-5xl font-display font-light tracking-[0.2em] text-primary uppercase">
             Beau Monde
-          </h1>
+          </p>
           <div className="flex items-center justify-center gap-4 mt-3">
             <div className="h-px w-8 bg-accent" />
             <span className="text-xs sm:text-sm tracking-[0.3em] uppercase text-primary/60 font-light">
