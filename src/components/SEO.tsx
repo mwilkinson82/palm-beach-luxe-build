@@ -210,7 +210,9 @@ export const SEO = ({
 }: SEOProps) => {
   const siteTitle = "Beau Monde Builders Palm Beach";
   const fullTitle = title ? `${title} | ${siteTitle}` : `${siteTitle} — Luxury Custom Home Builder`;
-  const canonicalUrl = canonical ? `${businessInfo.url}${canonical}` : businessInfo.url;
+  const canonicalPath = (canonical ?? "/").replace(/^\/+|\/+$/g, "");
+  const canonicalUrl = `${businessInfo.url}/${canonicalPath}`;
+  const socialUrl = canonical ? `${businessInfo.url}${canonical}` : businessInfo.url;
 
   return (
     <Helmet>
@@ -231,7 +233,7 @@ export const SEO = ({
       
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
-      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:url" content={socialUrl} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
@@ -240,7 +242,7 @@ export const SEO = ({
       
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:url" content={canonicalUrl} />
+      <meta name="twitter:url" content={socialUrl} />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
