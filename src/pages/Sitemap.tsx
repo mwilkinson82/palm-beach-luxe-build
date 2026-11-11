@@ -21,7 +21,7 @@ const sitemapSections = [
   {
     title: "Media & Social",
     links: [
-      { name: "Press", path: "/press", icon: Newspaper, description: "News and media coverage" },
+      { name: "Press", path: "/press", icon: Newspaper, description: "Placeholder page. Coverage has not been posted." },
       { name: "Social Media", path: "/social", icon: Share2, description: "Connect with us online" },
     ]
   },

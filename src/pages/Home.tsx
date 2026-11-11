@@ -18,6 +18,8 @@ import { Parallax } from "@/components/Parallax";
 import { ArrowRight, Star } from "lucide-react";
 import fcmbLogo from "@/assets/fcmb-logo.png";
 import logoSketch from "@/assets/beau-monde-logo-sketch.jpeg";
+import logoSketchWebp from "@/assets/beau-monde-logo-sketch.webp";
+import logoSketchAvif from "@/assets/beau-monde-logo-sketch.avif";
 import renovationHero from "@/assets/projects/renovation-hero.jpg.asset.json";
 import bespokePortrait from "@/assets/projects/bespoke-portrait.jpg.asset.json";
 import bespokeDetail from "@/assets/projects/bespoke-detail.jpg.asset.json";
@@ -81,7 +83,7 @@ const Home = () => {
     <>
       <SEO
         title="Beau Monde Builders Palm Beach | Custom Homes and Renovations"
-        description="Beau Monde Builders designs and builds custom homes and renovations from 205 Worth Avenue, Suite 120, Palm Beach, Florida. Call (561) 646-8992."
+        description="AJ Hoover, Florida Certified Master Builder, NAHB Certified Master Building Professional, CBC1260651. 205 Worth Avenue, Palm Beach. (561) 646-8992."
         path="/"
         breadcrumbs={[{ name: "Home", path: "/" }]}
         faq={HOME_FAQS}
@@ -342,7 +344,7 @@ const Home = () => {
                     <div className="relative">
                       <img
                         src={bespokePortrait.url}
-                        alt="Portrait of a Beau Monde client — the life behind the residence"
+                        alt="Woman in a pink dress and matching headscarf, wearing dark sunglasses, beside a boat railing with turquoise water behind her"
                         className="w-full aspect-[3/4] object-cover object-[center_top] shadow-[30px_30px_60px_-20px_hsl(var(--primary)/0.4)] ring-1 ring-accent/30"
                         loading="lazy"
                       />
@@ -603,12 +605,19 @@ const Home = () => {
                       <span aria-hidden className="absolute -bottom-2 -right-2 w-6 h-6 border-b border-r border-accent/70" />
                       <div className="border border-accent/30 bg-card p-6 shadow-[0_30px_60px_-30px_rgba(15,42,61,0.35)]">
                         <div className="w-full aspect-square">
-                          <img
-                            src={logoSketch}
-                            alt="Beau Monde Builders emblem — classical architecture with lions and palm trees"
-                            className="w-full h-full object-contain"
-                            loading="lazy"
-                          />
+                          <picture>
+                            <source type="image/avif" srcSet={logoSketchAvif} />
+                            <source type="image/webp" srcSet={logoSketchWebp} />
+                            <img
+                              src={logoSketch}
+                              alt="Beau Monde Builders emblem — classical architecture with lions and palm trees"
+                              width={1600}
+                              height={1600}
+                              loading="lazy"
+                              decoding="async"
+                              className="w-full h-full object-contain"
+                            />
+                          </picture>
                         </div>
                       </div>
                     </div>

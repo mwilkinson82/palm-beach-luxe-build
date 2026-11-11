@@ -11,8 +11,14 @@ import ajImageAsset from "@/assets/aj-hoover-v3.png.asset.json";
 import fcmbLogo from "@/assets/fcmb-logo.png";
 import nahbBadge from "@/assets/nahb-master-building-professional.png.asset.json";
 import michelleImage from "@/assets/michelle-williams.jpg";
+import michelleWebp from "@/assets/michelle-williams.webp";
+import michelleAvif from "@/assets/michelle-williams.avif";
 import johnImage from "@/assets/john-colaiacovo.jpg";
+import johnWebp from "@/assets/john-colaiacovo.webp";
+import johnAvif from "@/assets/john-colaiacovo.avif";
 import lindaImage from "@/assets/linda-lucas.jpg";
+import lindaWebp from "@/assets/linda-lucas.webp";
+import lindaAvif from "@/assets/linda-lucas.avif";
 import jillImageAsset from "@/assets/jill-hoover.png.asset.json";
 const jillImage = jillImageAsset.url;
 
@@ -409,22 +415,28 @@ const About = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-10 max-w-7xl mx-auto">
               {[
                 { name: "Jill Hoover", role: "Executive Assistant to CEO AJ Hoover", metric: "25", unit: "Years", discipline: "Executive Operations & Client Liaison", image: jillImage },
-                { name: "John Colaiacovo", role: "Senior Project Manager", metric: "40", unit: "Years", discipline: "Luxury Construction Management", image: johnImage },
-                { name: "Michelle Williams", role: "Director of Finance & Operations", metric: "20", unit: "Years", discipline: "Luxury Construction Finance", image: michelleImage },
-                { name: "Linda Lucas", role: "Senior Project Manager", metric: "25", unit: "Years", discipline: "Turning Visions Into Residences", image: lindaImage },
+                { name: "John Colaiacovo", role: "Senior Project Manager", metric: "40", unit: "Years", discipline: "Luxury Construction Management", image: johnImage, webp: johnWebp, avif: johnAvif, width: 624, height: 563 },
+                { name: "Michelle Williams", role: "Director of Finance & Operations", metric: "20", unit: "Years", discipline: "Luxury Construction Finance", image: michelleImage, webp: michelleWebp, avif: michelleAvif, width: 648, height: 594 },
+                { name: "Linda Lucas", role: "Senior Project Manager", metric: "25", unit: "Years", discipline: "Turning Visions Into Residences", image: lindaImage, webp: lindaWebp, avif: lindaAvif, width: 1263, height: 1600 },
               ].map((member, i) => (
                 <RevealAnimation key={member.name} animation="fade-up" delay={i * 140}>
                   <div className="group relative">
                     {/* Portrait */}
                     <div className="relative aspect-[4/5] overflow-hidden bg-muted/20">
-                      <img
-                        src={member.image}
-                        alt={member.name}
-                        loading="lazy"
-                        decoding="async"
-                        onError={(e) => { e.currentTarget.src = "/placeholder.svg"; }}
-                        className="w-full h-full object-cover object-center grayscale-[35%] group-hover:grayscale-0 transition-[filter] duration-700"
-                      />
+                      <picture>
+                        {"avif" in member && member.avif ? <source type="image/avif" srcSet={member.avif} /> : null}
+                        {"webp" in member && member.webp ? <source type="image/webp" srcSet={member.webp} /> : null}
+                        <img
+                          src={member.image}
+                          alt={member.name}
+                          width={member.width}
+                          height={member.height}
+                          loading="lazy"
+                          decoding="async"
+                          onError={(e) => { e.currentTarget.src = "/placeholder.svg"; }}
+                          className="w-full h-full object-cover object-center grayscale-[35%] group-hover:grayscale-0 transition-[filter] duration-700"
+                        />
+                      </picture>
                       {/* Seafoam wash that lifts on hover */}
                       <div
                         aria-hidden
