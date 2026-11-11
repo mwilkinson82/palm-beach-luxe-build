@@ -93,14 +93,20 @@ export const MillionRenovationProjectCarousel = ({
                   <CarouselItem key={photo.number} className="pl-0">
                     <figure className="relative bg-primary overflow-hidden border border-accent/30 shadow-[0_40px_90px_-35px_rgba(15,42,61,0.65)]">
                       <div className="relative aspect-[4/5] md:aspect-[16/10] lg:aspect-[16/9]">
-                        <img
-                          src={photo.src}
-                          alt={photo.alt}
-                          loading={index === 0 ? "eager" : "lazy"}
-                          decoding="async"
-                          sizes="(min-width: 1280px) 1152px, (min-width: 768px) 90vw, 100vw"
-                          className="absolute inset-0 h-full w-full object-contain"
-                        />
+                        <picture>
+                          <source type="image/avif" srcSet={photo.avif} />
+                          <source type="image/webp" srcSet={photo.webp} />
+                          <img
+                            src={photo.src}
+                            alt={photo.alt}
+                            width={photo.width}
+                            height={photo.height}
+                            loading="lazy"
+                            decoding="async"
+                            sizes="(min-width: 1280px) 1152px, (min-width: 768px) 90vw, 100vw"
+                            className="absolute inset-0 h-full w-full object-contain"
+                          />
+                        </picture>
                         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-primary/70 via-primary/15 to-transparent" />
                         <button
                           type="button"
@@ -169,13 +175,19 @@ export const MillionRenovationProjectCarousel = ({
                         : "border-accent/25 opacity-65 hover:border-accent/70 hover:opacity-100",
                     )}
                   >
-                    <img
-                      src={photo.src}
-                      alt=""
-                      loading="lazy"
-                      decoding="async"
-                      className="absolute inset-0 h-full w-full object-cover"
-                    />
+                    <picture>
+                      <source type="image/avif" srcSet={photo.avif} />
+                      <source type="image/webp" srcSet={photo.webp} />
+                      <img
+                        src={photo.src}
+                        alt=""
+                        width={photo.width}
+                        height={photo.height}
+                        loading="lazy"
+                        decoding="async"
+                        className="absolute inset-0 h-full w-full object-cover"
+                      />
+                    </picture>
                   </button>
                 );
               })}
@@ -283,12 +295,17 @@ const ProjectPhotoLightbox = ({
           <ArrowLeft className="h-5 w-5" strokeWidth={1.25} />
         </button>
 
-        <img
-          key={current}
-          src={photos[current].src}
-          alt={photos[current].alt}
-          className="max-h-full max-w-full object-contain border border-accent/30 shadow-2xl animate-fade-in"
-        />
+        <picture key={current}>
+          <source type="image/avif" srcSet={photos[current].avif} />
+          <source type="image/webp" srcSet={photos[current].webp} />
+          <img
+            src={photos[current].src}
+            alt={photos[current].alt}
+            width={photos[current].width}
+            height={photos[current].height}
+            className="max-h-full max-w-full object-contain border border-accent/30 shadow-2xl animate-fade-in"
+          />
+        </picture>
 
         <button
           type="button"
@@ -327,13 +344,19 @@ const ProjectPhotoLightbox = ({
                     : "border-primary-foreground/20 hover:border-accent/70 opacity-70 hover:opacity-100",
                 )}
               >
-                <img
-                  src={photo.src}
-                  alt=""
-                  loading="lazy"
-                  decoding="async"
-                  className="absolute inset-0 h-full w-full object-cover"
-                />
+                <picture>
+                  <source type="image/avif" srcSet={photo.avif} />
+                  <source type="image/webp" srcSet={photo.webp} />
+                  <img
+                    src={photo.src}
+                    alt=""
+                    width={photo.width}
+                    height={photo.height}
+                    loading="lazy"
+                    decoding="async"
+                    className="absolute inset-0 h-full w-full object-cover"
+                  />
+                </picture>
               </button>
             );
           })}

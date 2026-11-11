@@ -31,12 +31,12 @@ export const Footer = () => {
             <h4 className="text-[11px] uppercase tracking-[0.3em] text-accent font-semibold mb-6">Explore</h4>
             <ul className="space-y-3 text-sm font-light text-primary-foreground/75">
               {[
-                { label: "About", path: "/about" },
-                { label: "Process", path: "/process" },
-                { label: "Find My Style", path: "/projects" },
-                { label: "Renovations", path: "/renovations" },
-                { label: "Press", path: "/press" },
-                { label: "Contact", path: "/contact" },
+                { label: "Palm Beach custom homes", path: "/" },
+                { label: "About AJ Hoover", path: "/about" },
+                { label: "The building process", path: "/process" },
+                { label: "Home styles", path: "/projects" },
+                { label: "Palm Beach renovations", path: "/renovations" },
+                { label: "Contact the Palm Beach office", path: "/contact" },
               ].map((item) => (
                 <li key={item.label}>
                   <Link to={item.path} className="hover:text-primary-foreground transition-colors">

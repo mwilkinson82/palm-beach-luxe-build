@@ -19,16 +19,16 @@ The site states 50+ reviews across Google, Houzz, Yelp, and more. It does not pu
 - Jupiter Island
 - Singer Island
 - Palm Beach County
+- Jupiter
+- Wellington
 
 ## Pages
 
 - [Home](/): Office, services, and a draft FAQ for review.
 - [About](/about): AJ Hoover and the Palm Beach team.
 - [Process](/process): The nine-step custom home process.
-- [Your Style](/projects): Architectural styles used for Palm Beach residences.
 - [Renovations](/renovations): Whole-home, condominium, kitchen, and bath work, with the renovation FAQ.
 - [Contact](/contact): 205 Worth Avenue, Suite 120, Palm Beach, FL 33480. (561) 646-8992. By appointment.
-- [Press](/press): Placeholder page. Coverage is still being added.
 - [Social](/social): Instagram @bmbbuilders, plus the firm's Facebook, LinkedIn, and YouTube profiles.
 - [Sitemap](/sitemap): Page index.
 

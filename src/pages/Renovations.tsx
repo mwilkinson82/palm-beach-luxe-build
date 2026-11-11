@@ -57,7 +57,7 @@ const propertyTypes = [
   "Private Residences",
 ];
 
-const areasServed = ["Palm Beach Island", "West Palm Beach", "Jupiter Island", "Singer Island"];
+const areasServed = ["Palm Beach Island", "West Palm Beach", "Jupiter Island", "Singer Island", "Jupiter", "Wellington"];
 
 const fcmbCredentials = [
   { k: "Experience", v: "AJ Hoover, 30 years in construction" },
@@ -94,7 +94,7 @@ const Renovations = () => {
       <SEO
         title="Palm Beach Home Renovations | Beau Monde Builders"
         path="/renovations"
-        description="Whole-home, condominium, kitchen, and bath renovations by Beau Monde Builders on Palm Beach Island, in West Palm Beach, on Jupiter Island, and on Singer Island. AJ Hoover is a Florida Certified Master Builder, an NAHB Certified Master Building Professional, and a Florida Certified Building Contractor (CBC1260651)."
+        description="Whole-home, condominium, kitchen, and bath renovations by Beau Monde Builders on Palm Beach Island, in West Palm Beach, on Jupiter Island, on Singer Island, and in Jupiter and Wellington. AJ Hoover is a Florida Certified Master Builder, an NAHB Certified Master Building Professional, and a Florida Certified Building Contractor (CBC1260651)."
         breadcrumbs={[
           { name: "Home", path: "/" },
           { name: "Renovations", path: "/renovations" },
@@ -467,9 +467,10 @@ const Renovations = () => {
           headingId="renovation-faq-heading"
           sectionId="renovation-faq"
           related={[
-            { href: "/contact", label: "Contact" },
-            { href: "/process", label: "Process" },
-            { href: "/", label: "Home" },
+            { href: "/", label: "Palm Beach custom homes" },
+            { href: "/about", label: "About AJ Hoover" },
+            { href: "/process", label: "The building process" },
+            { href: "/contact", label: "Contact the Palm Beach office" },
           ]}
         />
 

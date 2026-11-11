@@ -12,19 +12,29 @@ const orderedPhotoNumbers = [
   ...availablePhotoNumbers.filter((photoNumber) => !preferredLeadSequence.includes(photoNumber)),
 ];
 
+const landscape = new Set([1, 4, 5, 11, 15, 27, 37]);
+
 export const MILLION_RENOVATION_PROJECT = {
   eyebrow: "Another Beau Monde Renovations Project",
   title: "$1 Million Renovation Project",
   value: "$1M",
   scope: "Whole-home renovation",
-  photos: orderedPhotoNumbers.map((photoNumber, index) => ({
-    number: photoNumber,
-    src: `/images/renovations/million-renovation/img-${photoNumber}.jpg`,
-    alt:
-      photoNumber === 37
-        ? "Completed exterior of the Beau Monde Builders million dollar renovation project"
-        : `Beau Monde Builders million dollar renovation project photo ${index + 1}`,
-  })),
+  photos: orderedPhotoNumbers.map((photoNumber, index) => {
+    const base = `/images/renovations/million-renovation/img-${photoNumber}`;
+    const wide = landscape.has(photoNumber);
+    return {
+      number: photoNumber,
+      src: `${base}.jpg`,
+      webp: `${base}.webp`,
+      avif: `${base}.avif`,
+      width: wide ? 2200 : 1466,
+      height: wide ? 1466 : 2200,
+      alt:
+        photoNumber === 37
+          ? "Completed exterior of the Beau Monde Builders million dollar renovation project"
+          : `Beau Monde Builders million dollar renovation project photo ${index + 1}`,
+    };
+  }),
 };
 
 export type MillionRenovationProjectPhoto =

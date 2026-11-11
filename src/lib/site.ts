@@ -35,8 +35,8 @@ export const LICENSE = {
 } as const;
 
 /**
- * Areas already named on this site (office city, the renovations list,
- * and Palm Beach County). Not expanded beyond those.
+ * Where Beau Monde works. Existing areas stay, including the islands
+ * and Palm Beach County. Jupiter and Wellington are included as well.
  */
 export const SERVICE_AREAS = [
   "Palm Beach",
@@ -45,6 +45,8 @@ export const SERVICE_AREAS = [
   "Jupiter Island",
   "Singer Island",
   "Palm Beach County",
+  "Jupiter",
+  "Wellington",
 ] as const;
 
 export const IDS = {
@@ -140,7 +142,7 @@ export const HOME_FAQS: FaqItem[] = [
   {
     question: "What does a Palm Beach renovation involve?",
     answer:
-      "A renovation with Beau Monde Builders can cover a whole home, a condominium, a kitchen, or a bath. The renovations page names Palm Beach Island, West Palm Beach, Jupiter Island, and Singer Island, and it describes condominium projects that include building management, schedule rules, and jobsite logistics. The scope and price are set for each project. To talk about a renovation, call (561) 646-8992 or use the contact form.",
+      "A renovation with Beau Monde Builders can cover a whole home, a condominium, a kitchen, or a bath. The renovations page names Palm Beach Island, West Palm Beach, Jupiter Island, Singer Island, Jupiter, and Wellington, and it describes condominium projects that include building management, schedule rules, and jobsite logistics. The scope and price are set for each project. To talk about a renovation, call (561) 646-8992 or use the contact form.",
   },
 ];
 

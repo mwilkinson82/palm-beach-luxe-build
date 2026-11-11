@@ -12,6 +12,7 @@ const Press = () => {
         title="Press | Beau Monde Builders Palm Beach"
         description="Press page for Beau Monde Builders Palm Beach. Media coverage is still being added."
         path="/press"
+        noIndex
         breadcrumbs={[
           { name: "Home", path: "/" },
           { name: "Press", path: "/press" },

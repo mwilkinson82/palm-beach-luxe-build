@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { RevealAnimation } from "@/components/RevealAnimation";
-import { SplashScreen } from "@/components/SplashScreen";
 import { SEO } from "@/components/SEO";
 import { DraftFaq } from "@/components/DraftFaq";
 import { HOME_FAQS, REVIEW_LINKS } from "@/lib/site";
@@ -76,7 +75,6 @@ const COMMITMENTS = [
 ];
 
 const Home = () => {
-  const [showSplash, setShowSplash] = useState(true);
   const [bentoLightboxIndex, setBentoLightboxIndex] = useState<number | null>(null);
 
   return (
@@ -88,14 +86,6 @@ const Home = () => {
         breadcrumbs={[{ name: "Home", path: "/" }]}
         faq={HOME_FAQS}
       />
-      
-      {/* Splash Screen */}
-      {showSplash && (
-        <SplashScreen 
-          duration={3000} 
-          onComplete={() => setShowSplash(false)} 
-        />
-      )}
       
       <div className="min-h-screen bg-background">
         <Navigation />
@@ -830,10 +820,11 @@ const Home = () => {
         items={HOME_FAQS}
         headingId="home-faq-heading"
         related={[
-          { href: "/process", label: "Process" },
-          { href: "/projects", label: "Your Style" },
-          { href: "/renovations", label: "Renovations" },
-          { href: "/contact", label: "Contact" },
+          { href: "/about", label: "About AJ Hoover" },
+          { href: "/process", label: "The building process" },
+          { href: "/projects", label: "Home styles" },
+          { href: "/renovations", label: "Palm Beach renovations" },
+          { href: "/contact", label: "Contact the Palm Beach office" },
         ]}
       />
 

@@ -9,13 +9,13 @@ const sitemapSections = [
   {
     title: "Main Pages",
     links: [
-      { name: "Home", path: "/", icon: Home, description: "Welcome to Beau Monde Builders" },
-      { name: "About Us", path: "/about", icon: Users, description: "Meet AJ Hoover and our team" },
-      { name: "Our Process", path: "/process", icon: Cog, description: "Our 9-step luxury building process" },
-      { name: "Your Style", path: "/projects", icon: Image, description: "Explore architectural styles" },
-      { name: "Renovations", path: "/renovations", icon: Hammer, description: "Whole-home, condo, kitchen, and bath work" },
+      { name: "Palm Beach custom homes", path: "/", icon: Home, description: "Welcome to Beau Monde Builders" },
+      { name: "About AJ Hoover", path: "/about", icon: Users, description: "Meet AJ Hoover and our team" },
+      { name: "The building process", path: "/process", icon: Cog, description: "Our 9-step luxury building process" },
+      { name: "Home styles", path: "/projects", icon: Image, description: "Explore architectural styles" },
+      { name: "Palm Beach renovations", path: "/renovations", icon: Hammer, description: "Whole-home, condo, kitchen, and bath work" },
       { name: "Questions", path: "/#faq", icon: FileText, description: "Draft answers about the Palm Beach office" },
-      { name: "Contact", path: "/contact", icon: Mail, description: "Get in touch with us" },
+      { name: "Contact the Palm Beach office", path: "/contact", icon: Mail, description: "Get in touch with us" },
     ]
   },
   {

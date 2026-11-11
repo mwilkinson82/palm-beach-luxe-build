@@ -896,6 +896,7 @@ const Projects = () => {
         description="Style studies from Beau Monde Builders: oceanfront, Mediterranean, Bermuda colonial, transitional, and other Palm Beach residences."
         path="/projects"
         pageType="CollectionPage"
+        noIndex
         breadcrumbs={[
           { name: "Home", path: "/" },
           { name: "Your Style", path: "/projects" },
