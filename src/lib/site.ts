@@ -135,7 +135,7 @@ export const HOME_FAQS: FaqItem[] = [
   {
     question: "Who builds custom homes in Palm Beach?",
     answer:
-      "Beau Monde Builders builds custom homes from its Palm Beach office at 205 Worth Avenue, Suite 120, Palm Beach, Florida 33480. The phone number there is (561) 646-8992, and the email is aj@bmbpalmbeach.com. The firm is led by AJ Hoover, a Florida Certified Building Contractor (license CBC1260651). Headquarters is 1129 Rockledge Blvd, Suite 101, Rockledge, Florida. The Rockledge office publishes its own site at bmb.builders.",
+      "Beau Monde Builders builds custom homes from its Palm Beach office at 205 Worth Avenue, Suite 120, Palm Beach, Florida 33480. The phone number there is (561) 646-8992, and the email is aj@bmbpalmbeach.com. The firm is led by AJ Hoover, a Florida Certified Master Builder, an NAHB Certified Master Building Professional, and a Florida Certified Building Contractor (license CBC1260651), with 30 years in the construction industry. Headquarters is 1129 Rockledge Blvd, Suite 101, Rockledge, Florida. The Rockledge office publishes its own site at bmb.builders.",
   },
   {
     question: "What does a Palm Beach renovation involve?",
@@ -267,21 +267,37 @@ const person = {
   name: "AJ Hoover",
   jobTitle: "Chief Executive Officer",
   description:
-    "AJ Hoover is chief executive of Beau Monde Builders, with 30 years in the construction industry. He is a Florida Certified Building Contractor, license CBC1260651. Beau Monde Builders was founded in 2015.",
+    "AJ Hoover is a Florida Certified Master Builder, an NAHB Certified Master Building Professional, and a Florida Certified Building Contractor (CBC1260651), with 30 years in the construction industry. Beau Monde Builders was founded in 2015.",
   image: absoluteUrl(ajPortrait.url),
   telephone: PALM_BEACH_PHONE,
   email: PUBLIC_EMAIL,
   worksFor: [{ "@id": IDS.parent }, { "@id": IDS.palmBeach }],
-  hasCredential: {
-    "@type": "EducationalOccupationalCredential",
-    credentialCategory: "license",
-    name: LICENSE.name,
-    identifier: LICENSE.identifier,
-    recognizedBy: {
-      "@type": "GovernmentOrganization",
-      name: "Florida Department of Business and Professional Regulation",
+  hasCredential: [
+    {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "license",
+      name: LICENSE.name,
+      identifier: LICENSE.identifier,
+      recognizedBy: {
+        "@type": "GovernmentOrganization",
+        name: "Florida Department of Business and Professional Regulation",
+      },
     },
-  },
+    {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "certification",
+      name: "Florida Certified Master Builder",
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "certification",
+      name: "NAHB Certified Master Building Professional",
+      recognizedBy: {
+        "@type": "Organization",
+        name: "National Association of Home Builders",
+      },
+    },
+  ],
   knowsAbout: ["Custom home building", "Home renovation"],
 };
 

@@ -94,7 +94,7 @@ const Renovations = () => {
       <SEO
         title="Palm Beach Home Renovations | Beau Monde Builders"
         path="/renovations"
-        description="Whole-home, condominium, kitchen, and bath renovations by Beau Monde Builders on Palm Beach Island, in West Palm Beach, on Jupiter Island, and on Singer Island."
+        description="Whole-home, condominium, kitchen, and bath renovations by Beau Monde Builders on Palm Beach Island, in West Palm Beach, on Jupiter Island, and on Singer Island. AJ Hoover is a Florida Certified Master Builder, an NAHB Certified Master Building Professional, and a Florida Certified Building Contractor (CBC1260651)."
         breadcrumbs={[
           { name: "Home", path: "/" },
           { name: "Renovations", path: "/renovations" },

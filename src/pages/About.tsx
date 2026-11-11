@@ -39,7 +39,7 @@ const About = () => {
     <>
       <SEO
         title="AJ Hoover and Beau Monde Builders | Palm Beach"
-        description="AJ Hoover is chief executive of Beau Monde Builders and a Florida Certified Building Contractor (CBC1260651). The Palm Beach office is at 205 Worth Avenue."
+        description="AJ Hoover is a Florida Certified Master Builder, an NAHB Certified Master Building Professional, and a Florida Certified Building Contractor (CBC1260651), with 30 years in the construction industry. The Palm Beach office is at 205 Worth Avenue."
         path="/about"
         pageType="AboutPage"
         mainEntityId={IDS.person}
@@ -344,8 +344,9 @@ const About = () => {
                     <span className="italic text-muted-foreground">Master Builder.</span>
                   </h2>
                   <p className="font-sans font-light text-base md:text-lg text-muted-foreground leading-relaxed mb-10">
-                    AJ holds the Florida Certified Master Builder designation —
-                    an elite voluntary credential. He has 30 years in the
+                    AJ holds the Florida Certified Master Builder designation and is an
+                    NAHB Certified Master Building Professional —
+                    elite voluntary credentials. He has 30 years in the
                     construction industry, impeccable ethics, and unbroken client trust.
                   </p>
 

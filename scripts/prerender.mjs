@@ -145,6 +145,12 @@ function assertFile(file, { must = [], mustNot = [], h1 = 1, types = [] }) {
         if (!credential.includes("CBC1260651")) {
           throw new Error(`${file} Person schema is missing license CBC1260651`);
         }
+        if (!credential.includes("Florida Certified Master Builder")) {
+          throw new Error(`${file} Person schema is missing Florida Certified Master Builder`);
+        }
+        if (!credential.includes("NAHB Certified Master Building Professional")) {
+          throw new Error(`${file} Person schema is missing NAHB CMBP`);
+        }
       }
     });
   }
