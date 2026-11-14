@@ -24,7 +24,7 @@ The site states 50+ reviews across Google, Houzz, Yelp, and more. It does not pu
 
 ## Pages
 
-- [Home](/): Office, services, and a draft FAQ for review.
+- [Home](/): Office, services, and answers to common questions.
 - [About](/about): AJ Hoover and the Palm Beach team.
 - [Process](/process): The nine-step custom home process.
 - [Renovations](/renovations): Whole-home, condominium, kitchen, and bath work, with the renovation FAQ.
@@ -34,7 +34,7 @@ The site states 50+ reviews across Google, Houzz, Yelp, and more. It does not pu
 
 ## Questions a reader can quote
 
-Draft copy, pending AJ Hoover's review, is on the home page at /#faq and on /renovations#renovation-faq.
+Answers are on the home page at /#faq and on /renovations#renovation-faq.
 
 - Who builds custom homes in Palm Beach?
 - What does a Palm Beach renovation involve?

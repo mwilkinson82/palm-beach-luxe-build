@@ -3,10 +3,7 @@ import type { FaqItem } from "@/lib/site";
 
 type RelatedLink = { href: string; label: string };
 
-/**
- * Visible FAQ for crawlers and readers.
- * Marked as draft until AJ Hoover approves the wording.
- */
+/** Visible FAQ for crawlers and readers. */
 export function DraftFaq({
   items,
   headingId,
@@ -21,23 +18,16 @@ export function DraftFaq({
   return (
     <section
       id={sectionId}
-      data-copy-status="draft"
       aria-labelledby={headingId}
       className="relative bg-background text-foreground border-t border-accent/20 py-24 md:py-32"
     >
       <div className="max-w-3xl mx-auto px-6 sm:px-10">
-        <p className="font-sans text-[10px] tracking-[0.35em] uppercase text-accent mb-6">
-          Draft for review
-        </p>
         <h2
           id={headingId}
-          className="font-display text-4xl md:text-5xl font-light text-primary leading-tight mb-6"
+          className="font-display text-4xl md:text-5xl font-light text-primary leading-tight mb-10"
         >
           Questions
         </h2>
-        <p className="font-sans font-light text-sm text-muted-foreground mb-12 max-w-2xl">
-          Draft copy for AJ Hoover's review. These answers use the office, license, and service details already published on this site.
-        </p>
         <dl className="space-y-10">
           {items.map((item) => (
             <div key={item.question} className="border-t border-accent/20 pt-8">

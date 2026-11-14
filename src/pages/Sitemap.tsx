@@ -14,7 +14,7 @@ const sitemapSections = [
       { name: "The building process", path: "/process", icon: Cog, description: "Our 9-step luxury building process" },
       { name: "Home styles", path: "/projects", icon: Image, description: "Explore architectural styles" },
       { name: "Palm Beach renovations", path: "/renovations", icon: Hammer, description: "Whole-home, condo, kitchen, and bath work" },
-      { name: "Questions", path: "/#faq", icon: FileText, description: "Draft answers about the Palm Beach office" },
+      { name: "Questions", path: "/#faq", icon: FileText, description: "Answers about the Palm Beach office" },
       { name: "Contact the Palm Beach office", path: "/contact", icon: Mail, description: "Get in touch with us" },
     ]
   },
