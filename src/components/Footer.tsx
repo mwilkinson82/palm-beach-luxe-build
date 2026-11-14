@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import fcmbLogo from "@/assets/fcmb-logo.png";
 import nahbBadge from "@/assets/nahb-master-building-professional.png.asset.json";
+import { SERVICE_AREAS } from "@/lib/site";
 
 export const Footer = () => {
   return (
@@ -20,7 +21,8 @@ export const Footer = () => {
             </div>
             <p className="text-sm font-light leading-relaxed max-w-sm text-primary-foreground/70">
               Creating Palm Beach's most distinguished estates through architectural excellence
-              and uncompromising craftsmanship since 1994.
+              and uncompromising craftsmanship. Led by AJ Hoover, with 30 years in the construction
+              industry. Beau Monde Builders, founded 2015.
             </p>
           </div>
 
@@ -29,12 +31,12 @@ export const Footer = () => {
             <h4 className="text-[11px] uppercase tracking-[0.3em] text-accent font-semibold mb-6">Explore</h4>
             <ul className="space-y-3 text-sm font-light text-primary-foreground/75">
               {[
-                { label: "About", path: "/about" },
-                { label: "Process", path: "/process" },
-                { label: "Find My Style", path: "/projects" },
-                { label: "Renovations", path: "/renovations" },
-                { label: "Press", path: "/press" },
-                { label: "Contact", path: "/contact" },
+                { label: "Palm Beach custom homes", path: "/" },
+                { label: "About AJ Hoover", path: "/about" },
+                { label: "The building process", path: "/process" },
+                { label: "Home styles", path: "/projects" },
+                { label: "Palm Beach renovations", path: "/renovations" },
+                { label: "Contact the Palm Beach office", path: "/contact" },
               ].map((item) => (
                 <li key={item.label}>
                   <Link to={item.path} className="hover:text-primary-foreground transition-colors">
@@ -49,11 +51,18 @@ export const Footer = () => {
           <div className="md:col-span-3">
             <h4 className="text-[11px] uppercase tracking-[0.3em] text-accent font-semibold mb-6">Services</h4>
             <ul className="space-y-3 text-sm font-light text-primary-foreground/75">
-              <li>Custom Home Design</li>
-              <li>Architectural Planning</li>
-              <li>Luxury Construction</li>
-              <li>Project Management</li>
-              <li>Interior Design</li>
+              {[
+                { label: "Custom Home Design", path: "/projects" },
+                { label: "Architectural Planning", path: "/process" },
+                { label: "Luxury Construction", path: "/projects" },
+                { label: "Project Management", path: "/process" },
+              ].map((item) => (
+                <li key={item.label}>
+                  <Link to={item.path} className="hover:text-primary-foreground transition-colors">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -74,6 +83,19 @@ export const Footer = () => {
                 <a href="mailto:aj@bmbpalmbeach.com" className="hover:text-primary-foreground transition-colors">
                   aj@bmbpalmbeach.com
                 </a>
+              </p>
+              <p className="text-xs leading-relaxed">
+                {SERVICE_AREAS.map((area, index) => (
+                  <span key={area}>
+                    {index > 0 && " · "}
+                    <Link
+                      to={area === "Palm Beach" ? "/contact" : "/renovations"}
+                      className="hover:text-primary-foreground transition-colors"
+                    >
+                      {area}
+                    </Link>
+                  </span>
+                ))}
               </p>
             </address>
           </div>
@@ -116,7 +138,7 @@ export const Footer = () => {
               {[
                 { eyebrow: "Accredited", line: "Fully Insured" },
                 { eyebrow: "State Registered", line: "FL Licensed Contractor" },
-              { eyebrow: "Established", line: "30 Years · Since 1994" },
+              { eyebrow: "Established", line: "Beau Monde Builders · Est. 2015" },
               ].map((c, i, arr) => (
                 <div key={c.eyebrow} className="flex items-center gap-x-12">
                   <div className="text-center">

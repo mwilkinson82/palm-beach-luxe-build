@@ -3,23 +3,24 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { RevealAnimation } from "@/components/RevealAnimation";
-import { Home, Users, Cog, Image, Newspaper, Share2, Mail, FileText, Shield } from "lucide-react";
+import { Home, Users, Cog, Image, Share2, Mail, FileText, Shield, Hammer } from "lucide-react";
 
 const sitemapSections = [
   {
     title: "Main Pages",
     links: [
-      { name: "Home", path: "/", icon: Home, description: "Welcome to Beau Monde Builders" },
-      { name: "About Us", path: "/about", icon: Users, description: "Meet AJ Hoover and our team" },
-      { name: "Our Process", path: "/process", icon: Cog, description: "Our 9-step luxury building process" },
-      { name: "Your Style", path: "/projects", icon: Image, description: "Explore architectural styles" },
-      { name: "Contact", path: "/contact", icon: Mail, description: "Get in touch with us" },
+      { name: "Palm Beach custom homes", path: "/", icon: Home, description: "Welcome to Beau Monde Builders" },
+      { name: "About AJ Hoover", path: "/about", icon: Users, description: "Meet AJ Hoover and our team" },
+      { name: "The building process", path: "/process", icon: Cog, description: "Our 9-step luxury building process" },
+      { name: "Home styles", path: "/projects", icon: Image, description: "Explore architectural styles" },
+      { name: "Palm Beach renovations", path: "/renovations", icon: Hammer, description: "Whole-home, condo, kitchen, and bath work" },
+      { name: "Questions", path: "/#faq", icon: FileText, description: "Answers about the Palm Beach office" },
+      { name: "Contact the Palm Beach office", path: "/contact", icon: Mail, description: "Get in touch with us" },
     ]
   },
   {
     title: "Media & Social",
     links: [
-      { name: "Press", path: "/press", icon: Newspaper, description: "News and media coverage" },
       { name: "Social Media", path: "/social", icon: Share2, description: "Connect with us online" },
     ]
   },
@@ -35,10 +36,14 @@ const sitemapSections = [
 const Sitemap = () => {
   return (
     <>
-      <SEO 
-        title="Sitemap"
-        canonical="/sitemap"
-        description="Complete directory of pages on the Beau Monde Builders website — services, portfolio, renovations, and contact information."
+      <SEO
+        title="Sitemap | Beau Monde Builders Palm Beach"
+        path="/sitemap"
+        description="Directory of pages on the Beau Monde Builders Palm Beach website: services, styles, renovations, and contact."
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Sitemap", path: "/sitemap" },
+        ]}
       />
       <div className="min-h-screen bg-background">
         <Navigation />

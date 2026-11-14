@@ -59,7 +59,12 @@ const Unsubscribe = () => {
 
   return (
     <>
-      <SEO title="Unsubscribe" description="Manage your email preferences with Beau Monde Builders." canonical="/unsubscribe" />
+      <SEO
+        title="Email Preferences | Beau Monde Builders Palm Beach"
+        description="Manage email preferences for Beau Monde Builders."
+        path="/unsubscribe"
+        noIndex
+      />
       <div className="min-h-screen bg-background flex flex-col">
         <Navigation />
         <main className="flex-1 flex items-center justify-center px-6 py-32">
@@ -69,7 +74,12 @@ const Unsubscribe = () => {
             </p>
 
             {state === "loading" && (
-              <p className="font-sans text-foreground/70">Verifying your request…</p>
+              <>
+                <h1 className="font-display italic font-light text-4xl md:text-5xl text-foreground mb-6">
+                  Email preferences
+                </h1>
+                <p className="font-sans text-foreground/70">Verifying your request…</p>
+              </>
             )}
 
             {state === "valid" && (

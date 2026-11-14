@@ -3,8 +3,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Link } from "react-router-dom";
 import { RevealAnimation } from "@/components/RevealAnimation";
-import { SEO, BreadcrumbSchema, ServicePageSchema } from "@/components/SEO";
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 import { BuildReadyChecklist } from "@/components/BuildReadyChecklist";
 import { ScheduleDrivenSection } from "@/components/ScheduleDrivenSection";
 
@@ -100,22 +99,15 @@ const ctaClass =
 
 // HowTo schema for the construction process
 const processSchema = {
-  "@context": "https://schema.org",
   "@type": "HowTo",
-  name: "Beau Monde Builders 9-Step Custom Home Building Process",
-  description: "A meticulously orchestrated journey from vision to reality, guided by 30 years of expertise in luxury homebuilding.",
-  totalTime: "PT12M",
-  estimatedCost: {
-    "@type": "MonetaryAmount",
-    currency: "USD",
-    value: "Varies by project scope"
-  },
+  name: "Beau Monde Builders 9-step custom home building process",
+  description: "Nine steps Beau Monde Builders uses for a custom home, from the first consultation through handover.",
   step: allSteps.map((step, index) => ({
     "@type": "HowToStep",
     position: index + 1,
     name: step.title,
-    text: step.description
-  }))
+    text: step.description,
+  })),
 };
 
 const Process = () => {
@@ -135,24 +127,16 @@ const Process = () => {
 
   return (
     <>
-      <SEO 
-        title="Our 9-Step Building Process"
-        description="Discover Beau Monde Builders' meticulous 9-step custom home building process. From initial consultation to seamless move-in, we guide you through every phase."
-        canonical="/process"
+      <SEO
+        title="Custom Home Building Process | Beau Monde Builders Palm Beach"
+        description="The nine steps Beau Monde Builders uses for a custom home, from the first consultation through construction and handover. Palm Beach office on Worth Avenue."
+        path="/process"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Process", path: "/process" },
+        ]}
+        extraJsonLd={[processSchema]}
       />
-      <BreadcrumbSchema items={[
-        { name: "Home", url: "/" },
-        { name: "Process", url: "/process" }
-      ]} />
-      <ServicePageSchema 
-        serviceName="Custom Luxury Home Building Process"
-        description="Our comprehensive 9-step process ensures your vision becomes reality with precision and excellence."
-      />
-      <Helmet>
-        <script type="application/ld+json">
-          {JSON.stringify(processSchema)}
-        </script>
-      </Helmet>
       <div className="min-h-screen bg-background">
         <Navigation />
 
@@ -222,9 +206,9 @@ const Process = () => {
               >
                 <RevealAnimation animation="fade-up" delay={620}>
                   <p className="font-sans font-light text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
-                    30 years of master-built craft, distilled into a private,
-                    measured cadence — from the first quiet conversation to the day
-                    we hand you the keys.
+                    Led by AJ Hoover, with 30 years in the construction industry,
+                    distilled into a private, measured cadence — from the first quiet
+                    conversation to the day we hand you the keys.
                   </p>
                 </RevealAnimation>
 

@@ -2,21 +2,22 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { RevealAnimation } from "@/components/RevealAnimation";
-import { SEO, BreadcrumbSchema } from "@/components/SEO";
+import { SEO } from "@/components/SEO";
+import { SOCIAL_LINKS } from "@/lib/site";
 import { Instagram, Facebook, Youtube, Linkedin } from "lucide-react";
 
 const Social = () => {
   return (
     <>
-      <SEO 
-        title="Follow Us on Social Media"
-        description="Connect with Beau Monde Builders on Instagram, Facebook, YouTube, and LinkedIn. Explore luxury home design inspiration and behind-the-scenes content."
-        canonical="/social"
+      <SEO
+        title="Social | Beau Monde Builders Palm Beach"
+        description="Beau Monde Builders on Instagram (@bmbbuilders), Facebook, LinkedIn, and YouTube."
+        path="/social"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Social", path: "/social" },
+        ]}
       />
-      <BreadcrumbSchema items={[
-        { name: "Home", url: "/" },
-        { name: "Social", url: "/social" }
-      ]} />
       <div className="min-h-screen bg-background">
         <Navigation />
 
@@ -60,7 +61,7 @@ const Social = () => {
                 className="relative z-10 border-accent text-accent hover:bg-accent hover:text-background transition-all duration-500 w-full"
                 asChild
               >
-                <a href="https://instagram.com/beaumondebuilders" target="_blank" rel="noopener noreferrer">
+                <a href={SOCIAL_LINKS.instagram.href} target="_blank" rel="noopener noreferrer">
                   Follow Us
                 </a>
               </Button>
@@ -82,7 +83,7 @@ const Social = () => {
                 className="relative z-10 border-accent text-accent hover:bg-accent hover:text-background transition-all duration-500 w-full"
                 asChild
               >
-                <a href="https://facebook.com/beaumondebuilders" target="_blank" rel="noopener noreferrer">
+                <a href={SOCIAL_LINKS.facebook.href} target="_blank" rel="noopener noreferrer">
                   Like Our Page
                 </a>
               </Button>
@@ -104,7 +105,7 @@ const Social = () => {
                 className="relative z-10 border-accent text-accent hover:bg-accent hover:text-background transition-all duration-500 w-full"
                 asChild
               >
-                <a href="https://youtube.com/@beaumondebuilders" target="_blank" rel="noopener noreferrer">
+                <a href={SOCIAL_LINKS.youtube.href} target="_blank" rel="noopener noreferrer">
                   Subscribe
                 </a>
               </Button>
@@ -126,7 +127,7 @@ const Social = () => {
                 className="relative z-10 border-accent text-accent hover:bg-accent hover:text-background transition-all duration-500 w-full"
                 asChild
               >
-                <a href="https://linkedin.com/company/beaumondebuilders" target="_blank" rel="noopener noreferrer">
+                <a href={SOCIAL_LINKS.linkedin.href} target="_blank" rel="noopener noreferrer">
                   Connect
                 </a>
               </Button>
@@ -143,7 +144,7 @@ const Social = () => {
               Latest From <span className="font-serif italic">Instagram</span>
             </h2>
             <p className="text-accent font-light tracking-[0.3em] text-sm">
-              @beaumondebuilders
+              {SOCIAL_LINKS.instagram.handle}
             </p>
           </div>
           

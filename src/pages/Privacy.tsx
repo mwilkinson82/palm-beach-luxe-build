@@ -6,10 +6,14 @@ import { RevealAnimation } from "@/components/RevealAnimation";
 const Privacy = () => {
   return (
     <>
-      <SEO 
-        title="Privacy Policy"
-        canonical="/privacy"
-        description="How Beau Monde Builders collects, uses, and protects your personal information across our website and luxury homebuilding services."
+      <SEO
+        title="Privacy Policy | Beau Monde Builders Palm Beach"
+        path="/privacy"
+        description="How Beau Monde Builders collects, uses, and protects personal information on this website."
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Privacy", path: "/privacy" },
+        ]}
       />
       <div className="min-h-screen bg-background">
         <Navigation />

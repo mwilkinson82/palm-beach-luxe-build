@@ -69,7 +69,7 @@ import c64 from "@/assets/constellation/c64.jpg.asset.json";
 import c65 from "@/assets/constellation/c65.jpg.asset.json";
 import c66 from "@/assets/constellation/c66.jpg.asset.json";
 
-export const PHOTOS: { url: string }[] = [
+const PHOTO_SOURCES = [
   c1, c2, c3, c4, c5, c6, c7, c8, c9, c11,
   c12, c13, c14, c15, c16, c17, c18, c19, c20, c21,
   c22, c23, c24, c25, c26, c27, c28, c29, c30, c31,
@@ -78,6 +78,79 @@ export const PHOTOS: { url: string }[] = [
   c52, c53, c54, c55, c56, c57, c58, c59, c60, c61,
   c62, c63, c64, c65, c66,
 ];
+
+const PHOTO_ALTS = [
+  "Two-story residence with a clay tile roof, an arched entry, and palm trees.",
+  "Swimming pool at sunset, with a white house and palm trees behind it.",
+  "Front of a two-story residence with a clay tile roof, three garage doors, and palm trees.",
+  "Front of a two-story white residence with a clay tile roof and a second-floor balcony.",
+  "Arched front doorway with dark double doors and a patterned tile step.",
+  "Arched entry with dark double doors, wall lanterns, and a patterned tile step.",
+  "Dark double doors with glass panels, seen from inside a white entry.",
+  "Room with three arched windows, shutters, a ceiling fan, and a desk.",
+  "Room with arched shuttered windows, a ceiling fan, and a desk.",
+  "Stair hall with a dark metal railing and windows beyond.",
+  "Curved stair with a dark railing beside a turquoise wall.",
+  "Open room with a ceiling fan, a long counter with stools, and a row of windows.",
+  "Bathroom with a white vanity, blue mosaic tile, a glass shower, and a round mirror.",
+  "Empty room with a ceiling fan, opening toward a kitchen with a blue island.",
+  "Kitchen counter with four wood stools, a mosaic backsplash, and white cabinets.",
+  "Empty white room with a lantern pendant and an arched doorway.",
+  "Walk-in closet with empty wood shelves and drawers.",
+  "Kitchen with two blue islands, stone counters, and white upper cabinets.",
+  "Kitchen with blue lower cabinets, a stainless refrigerator, and pendant lights.",
+  "Kitchen with a blue island, stone counters, and a row of pendant lights.",
+  "Kitchen with blue cabinets, stone counters, and windows above the sink.",
+  "Blue kitchen island with a stone top and pendant lights, and a window beyond.",
+  "Kitchen with white cabinets, a blue island, and a mosaic backsplash.",
+  "Window with a patterned roman shade above a stone backsplash.",
+  "Bathroom with a toilet, a white vanity, a round mirror, and a shuttered window.",
+  "Wood stair with a black metal railing and windows at the landing.",
+  "Upper landing with a wood and metal railing, an arched opening, and a round pendant light.",
+  "Empty room with light wood floors, a blue accent wall, and windows.",
+  "Open room with a ceiling fan, blue and turquoise walls, and windows.",
+  "Exercise room with a treadmill, weights, a wall-mounted screen, and a ceiling fan.",
+  "Empty bedroom with pale blue walls, carpet, and a ceiling fan.",
+  "Empty room with pale blue walls, two shuttered windows, and a ceiling fan.",
+  "Bathroom with a navy vanity, a glass shower, and a blue tile border.",
+  "Empty pale blue room with a ceiling fan and a window.",
+  "Bathroom with a soaking tub, blue patterned wall tile, and a shuttered window.",
+  "Empty bedroom with mint walls, carpet, and a ceiling fan.",
+  "Ceiling fan and a tray ceiling in a room with mint walls.",
+  "Empty room with mint walls, a ceiling fan, and a doorway.",
+  "Bathroom vanity with navy cabinets, white counters, and a shuttered window.",
+  "Empty room with white walls, a ceiling fan, and light wood floors.",
+  "Swimming pool and spa with palm trees and water beyond the deck.",
+  "Curved swimming pool with a raised spa and palm trees.",
+  "Upper stair landing with a wood and iron railing and turquoise walls.",
+  "Stair landing with an iron railing and French doors opening toward the water.",
+  "French doors opening onto a balcony with a view of the water.",
+  "Bathroom with a white vanity, blue floor tile, and a shuttered window.",
+  "Bathroom with a white soaking tub and blue patterned tile.",
+  "Stair with a wood handrail and iron balusters.",
+  "Bathroom with a long blue vanity, two sinks, and shuttered windows.",
+  "Empty wood closet shelves.",
+  "Aerial view of a white residence with a brown roof and a swimming pool.",
+  "Aerial view of a white residence with a pool and a covered patio.",
+  "Aerial view of a residence beside a wide body of water, with a road in front.",
+  "Front of a two-story residence with a brown roof, seen from the street.",
+  "Side of a white residence with a glass-roofed patio and a curved walk.",
+  "Metal gate between white walls, with a pool and water beyond.",
+  "Swimming pool in front of a white residence, with water in the distance.",
+  "Swimming pool and spa beside a single-story white residence.",
+  "Swimming pool in front of a white residence with blue arched doors.",
+  "Swimming pool and raised spa on a paved deck.",
+  "Overhead view of a residence with a brown roof and a free-form pool.",
+  "Overhead view of a residence with a brown roof, a pool, and a circular drive.",
+  "Two-story residence with a brown roof, seen from the street, with water behind it.",
+  "White residence with a pool, with open water and marsh behind the house.",
+  "Residence with a pool, beside open water and low vegetation.",
+];
+
+export const PHOTOS: { url: string; alt: string }[] = PHOTO_SOURCES.map((photo, index) => ({
+  url: photo.url,
+  alt: PHOTO_ALTS[index],
+}));
 
 /**
  * Editorial filmstrip of walkthrough stills.
@@ -144,12 +217,12 @@ export const WalkthroughGallery = () => {
               key={i}
               type="button"
               onClick={() => setOpenIndex(i)}
-              aria-label={`Open photo ${i + 1} of ${PHOTOS.length}`}
+              aria-label={`Open photo ${i + 1} of ${PHOTOS.length}: ${p.alt}`}
               className="group relative flex-shrink-0 w-72 md:w-96 lg:w-[28rem] aspect-[4/3] bg-primary overflow-hidden ring-1 ring-accent/30 hover:ring-accent/80 transition-[box-shadow] duration-500 snap-start shadow-[0_20px_50px_-25px_rgba(15,42,61,0.45)]"
             >
               <img
                 src={p.url}
-                alt=""
+                alt={p.alt}
                 loading="lazy"
                 className="absolute inset-0 h-full w-full object-cover group-hover:scale-[1.02] transition-transform duration-[900ms] ease-out"
               />
@@ -202,7 +275,7 @@ export const WalkthroughGallery = () => {
 /* ------------------------------------------------------------------ */
 
 interface PhotoLightboxProps {
-  photos: { url: string }[];
+  photos: { url: string; alt: string }[];
   initialIndex: number;
   onClose: () => void;
 }
@@ -289,7 +362,7 @@ export const PhotoLightbox = ({ photos, initialIndex, onClose }: PhotoLightboxPr
         <img
           key={current}
           src={photos[current].url}
-          alt={`Photo ${current + 1} of ${total}`}
+          alt={photos[current].alt}
           className="max-h-full max-w-full object-contain border border-accent/30 shadow-2xl animate-fade-in"
         />
 
@@ -322,7 +395,7 @@ export const PhotoLightbox = ({ photos, initialIndex, onClose }: PhotoLightboxPr
                 key={i}
                 type="button"
                 onClick={() => setCurrent(i)}
-                aria-label={`Show photo ${i + 1}`}
+                aria-label={`Show photo ${i + 1}: ${p.alt}`}
                 aria-current={active}
                 className={`group relative flex-shrink-0 w-24 md:w-32 aspect-[3/2] bg-black overflow-hidden border transition-all duration-300 ${
                   active

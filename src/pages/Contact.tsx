@@ -2,19 +2,9 @@ import { useState } from "react";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { RevealAnimation } from "@/components/RevealAnimation";
-import { SEO, BreadcrumbSchema } from "@/components/SEO";
+import { SEO } from "@/components/SEO";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
-import { Helmet } from "react-helmet-async";
-
-// Contact page specific schema
-const contactPageSchema = {
-  "@context": "https://schema.org",
-  "@type": "ContactPage",
-  name: "Contact Beau Monde Builders",
-  description: "Schedule a private consultation for your luxury custom home in Palm Beach. Contact us at (561) 646-8992 or visit our Worth Avenue office.",
-  url: "https://bmbpalmbeach.com/contact",
-};
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -92,20 +82,16 @@ const Contact = () => {
 
   return (
     <>
-      <SEO 
-        title="Contact Us"
-          description="Schedule a private consultation with Beau Monde Builders at 205 Worth Avenue, Palm Beach. Call (561) 646-8992. By appointment only."
-        canonical="/contact"
+      <SEO
+        title="Contact the Palm Beach Office | Beau Monde Builders"
+        description="Contact Beau Monde Builders at 205 Worth Avenue, Suite 120, Palm Beach, FL 33480, or call (561) 646-8992. By appointment."
+        path="/contact"
+        pageType="ContactPage"
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Contact", path: "/contact" },
+        ]}
       />
-      <BreadcrumbSchema items={[
-        { name: "Home", url: "/" },
-        { name: "Contact", url: "/contact" }
-      ]} />
-      <Helmet>
-        <script type="application/ld+json">
-          {JSON.stringify(contactPageSchema)}
-        </script>
-      </Helmet>
       <div className="min-h-screen bg-background">
         <Navigation />
 

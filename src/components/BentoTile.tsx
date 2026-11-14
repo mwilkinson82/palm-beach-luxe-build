@@ -71,6 +71,7 @@ export const BentoTile = ({
       src={src}
       alt={alt}
       loading="lazy"
+      decoding="async"
       className={cn(
         "absolute inset-0 h-full w-full object-cover will-change-transform",
         "transition-[transform,filter] duration-[1600ms] ease-out",

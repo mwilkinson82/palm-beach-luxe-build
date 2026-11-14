@@ -4,8 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { RevealAnimation } from "@/components/RevealAnimation";
-import { SplashScreen } from "@/components/SplashScreen";
 import { SEO } from "@/components/SEO";
+import { DraftFaq } from "@/components/DraftFaq";
+import { HOME_FAQS, REVIEW_LINKS } from "@/lib/site";
 import { VideoHero } from "@/components/VideoHero";
 import { DeliveryShowcase } from "@/components/DeliveryShowcase";
 import { WalkthroughShowcase } from "@/components/WalkthroughShowcase";
@@ -17,6 +18,8 @@ import { Parallax } from "@/components/Parallax";
 import { ArrowRight, Star } from "lucide-react";
 import fcmbLogo from "@/assets/fcmb-logo.png";
 import logoSketch from "@/assets/beau-monde-logo-sketch.jpeg";
+import logoSketchWebp from "@/assets/beau-monde-logo-sketch.webp";
+import logoSketchAvif from "@/assets/beau-monde-logo-sketch.avif";
 import renovationHero from "@/assets/projects/renovation-hero.jpg.asset.json";
 import bespokePortrait from "@/assets/projects/bespoke-portrait.jpg.asset.json";
 import bespokeDetail from "@/assets/projects/bespoke-detail.jpg.asset.json";
@@ -49,7 +52,7 @@ const EMBLEM_MEANINGS = [
 ];
 
 const FCMB_CREDENTIALS = [
-  { k: "Experience", v: "30 years of proven industry practice" },
+  { k: "Experience", v: "30 years of proven industry practice, led by AJ Hoover" },
   { k: "Record", v: "Clean regulatory and disciplinary history" },
   { k: "References", v: "Verified by clients and subcontractors" },
   { k: "Warranty", v: "Written, minimum one-year guarantee" },
@@ -74,23 +77,17 @@ const COMMITMENTS = [
 ];
 
 const Home = () => {
-  const [showSplash, setShowSplash] = useState(true);
   const [bentoLightboxIndex, setBentoLightboxIndex] = useState<number | null>(null);
 
   return (
     <>
-      <SEO 
-        canonical="/"
-        description="Beau Monde Builders — Florida's premier custom luxury home builder on Worth Avenue, Palm Beach. 30 years crafting bespoke oceanfront estates."
+      <SEO
+        title="Beau Monde Builders Palm Beach | Custom Homes and Renovations"
+        description="AJ Hoover, Florida Certified Master Builder, NAHB Certified Master Building Professional, CBC1260651. 205 Worth Avenue, Palm Beach. (561) 646-8992."
+        path="/"
+        breadcrumbs={[{ name: "Home", path: "/" }]}
+        faq={HOME_FAQS}
       />
-      
-      {/* Splash Screen */}
-      {showSplash && (
-        <SplashScreen 
-          duration={3000} 
-          onComplete={() => setShowSplash(false)} 
-        />
-      )}
       
       <div className="min-h-screen bg-background">
         <Navigation />
@@ -138,7 +135,7 @@ const Home = () => {
               <RevealAnimation animation="fade-up" delay={240}>
                 <p className="font-sans font-light text-[15px] md:text-base leading-relaxed text-foreground/80 mb-7 max-w-lg">
                   An intracoastal estate completed this season — every threshold, joint, and finish
-                  shaped by 30 years of Beau Monde craftsmanship.
+                  shaped by AJ Hoover, with 30 years in the construction industry.
                 </p>
                 <Link
                   to="/projects"
@@ -248,8 +245,8 @@ const Home = () => {
 
               <RevealAnimation animation="fade-up" delay={250}>
                 <p className="font-sans font-light text-base md:text-lg leading-relaxed max-w-lg mb-10 text-foreground/85">
-                  Where architectural excellence meets uncompromising craftsmanship. 30 years of creating Palm Beach's
-                  most distinguished estates — custom residences beginning at $5M and rising into the extraordinary.
+                  Where architectural excellence meets uncompromising craftsmanship. Led by AJ Hoover, with 30 years in the
+                  construction industry — custom residences for discerning Palm Beach clients.
                 </p>
               </RevealAnimation>
 
@@ -300,7 +297,19 @@ const Home = () => {
                     ))}
                   </div>
                   <span className="font-sans text-[10px] uppercase tracking-widest text-foreground/60">
-                    50+ Reviews · Google Verified
+                    50+ reviews across{" "}
+                    <a href={REVIEW_LINKS.googleRockledge.href} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+                      {REVIEW_LINKS.googleRockledge.label}
+                    </a>
+                    {", "}
+                    <a href={REVIEW_LINKS.googlePalmBeach.href} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+                      {REVIEW_LINKS.googlePalmBeach.label}
+                    </a>
+                    {", "}
+                    <a href={REVIEW_LINKS.houzz.href} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+                      {REVIEW_LINKS.houzz.label}
+                    </a>
+                    {", Yelp and more"}
                   </span>
                 </div>
               </RevealAnimation>
@@ -335,7 +344,7 @@ const Home = () => {
                     <div className="relative">
                       <img
                         src={bespokePortrait.url}
-                        alt="Portrait of a Beau Monde client — the life behind the residence"
+                        alt="Woman in a pink dress and matching headscarf, wearing dark sunglasses, beside a boat railing with turquoise water behind her"
                         className="w-full aspect-[3/4] object-cover object-[center_top] shadow-[30px_30px_60px_-20px_hsl(var(--primary)/0.4)] ring-1 ring-accent/30"
                         loading="lazy"
                       />
@@ -355,14 +364,18 @@ const Home = () => {
           <div className="py-12 md:py-14 border-b border-accent/30">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 divide-x divide-accent/20">
               {[
-                { v: "30", l: "Years Excellence" },
-                { v: "$150M+", l: "Project Value" },
-                { v: "25+", l: "Estate Homes" },
+                { v: "30", l: "Years in Construction · AJ Hoover" },
+                { v: "Custom homes and estate renovations", l: "Palm Beach office", phrase: true },
+                { v: "CBC1260651", l: "Florida Certified Building Contractor", phrase: true },
                 { v: "100%", l: "Client Satisfaction" },
               ].map((s, i) => (
                 <RevealAnimation key={s.l} animation="fade-up" delay={i * 120}>
-                  <div className="text-center first:border-l-0">
-                    <div className="font-display text-4xl md:text-5xl font-light mb-1">{s.v}</div>
+                  <div className="text-center px-4">
+                    <div className={s.phrase
+                      ? "font-display text-xl md:text-2xl font-light leading-tight mb-2"
+                      : "font-display text-4xl md:text-5xl font-light mb-1"}>
+                      {s.v}
+                    </div>
                     <div className="font-sans text-[9px] md:text-[10px] uppercase tracking-[0.2em] text-accent">
                       {s.l}
                     </div>
@@ -558,8 +571,8 @@ const Home = () => {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 font-sans font-light text-[15px] leading-relaxed text-foreground/90">
                   <p>
-                    Founded on the principle that a custom home is the ultimate expression of its owner, AJ Hoover has
-                    spent 30 years refining a hands-on approach that prioritizes the artisanal over the industrial.
+                    Beau Monde Builders was founded in 2015. It is led by AJ Hoover, with 30 years in the construction
+                    industry and a hands-on approach that prioritizes the artisanal over the industrial.
                   </p>
                   <p>
                     By limiting our project count, we ensure that every stone, every beam, and every finish receives the
@@ -592,12 +605,19 @@ const Home = () => {
                       <span aria-hidden className="absolute -bottom-2 -right-2 w-6 h-6 border-b border-r border-accent/70" />
                       <div className="border border-accent/30 bg-card p-6 shadow-[0_30px_60px_-30px_rgba(15,42,61,0.35)]">
                         <div className="w-full aspect-square">
-                          <img
-                            src={logoSketch}
-                            alt="Beau Monde Builders emblem — classical architecture with lions and palm trees"
-                            className="w-full h-full object-contain"
-                            loading="lazy"
-                          />
+                          <picture>
+                            <source type="image/avif" srcSet={logoSketchAvif} />
+                            <source type="image/webp" srcSet={logoSketchWebp} />
+                            <img
+                              src={logoSketch}
+                              alt="Beau Monde Builders emblem — classical architecture with lions and palm trees"
+                              width={1600}
+                              height={1600}
+                              loading="lazy"
+                              decoding="async"
+                              className="w-full h-full object-contain"
+                            />
+                          </picture>
                         </div>
                       </div>
                     </div>
@@ -804,6 +824,18 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <DraftFaq
+        items={HOME_FAQS}
+        headingId="home-faq-heading"
+        related={[
+          { href: "/about", label: "About AJ Hoover" },
+          { href: "/process", label: "The building process" },
+          { href: "/projects", label: "Home styles" },
+          { href: "/renovations", label: "Palm Beach renovations" },
+          { href: "/contact", label: "Contact the Palm Beach office" },
+        ]}
+      />
 
       {/* Closing CTA — full-width navy invitation */}
       <section

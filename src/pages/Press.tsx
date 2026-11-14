@@ -3,20 +3,21 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { RevealAnimation } from "@/components/RevealAnimation";
-import { SEO, BreadcrumbSchema } from "@/components/SEO";
+import { SEO } from "@/components/SEO";
 
 const Press = () => {
   return (
     <>
-      <SEO 
-        title="Press & Media"
-        description="Press coverage and media recognition for Beau Monde Builders. Industry awards, media features, and thought leadership in Palm Beach luxury homebuilding."
-        canonical="/press"
+      <SEO
+        title="Press | Beau Monde Builders Palm Beach"
+        description="Press page for Beau Monde Builders Palm Beach. Media coverage is still being added."
+        path="/press"
+        noIndex
+        breadcrumbs={[
+          { name: "Home", path: "/" },
+          { name: "Press", path: "/press" },
+        ]}
       />
-      <BreadcrumbSchema items={[
-        { name: "Home", url: "/" },
-        { name: "Press", url: "/press" }
-      ]} />
       <div className="min-h-screen bg-background">
         <Navigation />
 
