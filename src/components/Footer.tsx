@@ -56,7 +56,6 @@ export const Footer = () => {
                 { label: "Architectural Planning", path: "/process" },
                 { label: "Luxury Construction", path: "/projects" },
                 { label: "Project Management", path: "/process" },
-                { label: "Interior Design", path: "/renovations" },
               ].map((item) => (
                 <li key={item.label}>
                   <Link to={item.path} className="hover:text-primary-foreground transition-colors">
