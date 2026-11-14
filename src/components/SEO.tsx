@@ -33,6 +33,8 @@ export const SEO = ({
   extraJsonLd,
   mainEntityId,
 }: SEOProps) => {
+  // Self-referencing canonical. Home is https://bmbpalmbeach.com/ and each
+  // inner page is its own URL, matching the live-site canonical intent.
   const canonical = path ? absoluteUrl(path) : undefined;
   const jsonLd = structuredData({
     path,
